@@ -14,6 +14,10 @@ function ProductCard({ product }: { product: Product }): JSX.Element {
                     Heat {product.heat} // {product.size}
                 </p>
                 <p className="text-sm">{product.note}</p>
+                <p className="text-xs leading-relaxed text-neutral-700">
+                    <span className="font-mono uppercase tracking-widest text-neutral-600">Ingredients:</span>{" "}
+                    {product.ingredients}
+                </p>
             </div>
             <div className="flex items-center justify-between gap-3">
                 <span className="rounded-none border border-red-700 bg-red-700 px-2 py-1 font-mono text-xs uppercase tracking-widest text-white">
@@ -32,11 +36,11 @@ function ProductCard({ product }: { product: Product }): JSX.Element {
 
 export function ProductsSection({ products }: ProductsSectionProps): JSX.Element {
     return (
-        <section id="products" className="mt-10 rounded-none border border-black">
+        <section id="products" className="mt-10 w-full rounded-none border border-black xl:mx-auto xl:w-1/2">
             <div className="border-b border-black px-6 py-4">
                 <h2 className="font-sans text-3xl font-black tracking-tighter">PRODUCT LINE</h2>
             </div>
-            <div className="grid grid-cols-1 divide-y divide-black md:grid-cols-3 md:divide-x md:divide-y-0">
+            <div className="grid grid-cols-1 divide-y divide-black">
                 {products.map((product) => (
                     <ProductCard key={product.name} product={product} />
                 ))}

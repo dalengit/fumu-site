@@ -5,5 +5,6 @@ export interface Product {
     heat: "MILD" | "MEDIUM" | "HIGH";
     size: string;
     note: string;
+    ingredients: string;
     status: ProductStatus;
 }
