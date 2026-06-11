@@ -23,12 +23,6 @@ function ProductCard({ product }: { product: Product }): JSX.Element {
                 <span className="rounded-none border border-red-700 bg-red-700 px-2 py-1 font-mono text-xs uppercase tracking-widest text-white">
                     {product.status}
                 </span>
-                <button
-                    type="button"
-                    className="rounded-none border border-black px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
-                >
-                    Notify Me
-                </button>
             </div>
         </article>
     );
