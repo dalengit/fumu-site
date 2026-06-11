@@ -1,6 +1,8 @@
 import type { JSX } from "react";
 import Image from "next/image";
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function HeroSection(): JSX.Element {
     return (
         <section
@@ -10,7 +12,7 @@ export function HeroSection(): JSX.Element {
             <div className="space-y-4 text-center lg:col-span-12">
                 <div className="mascot-float mx-auto w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[330px]">
                     <Image
-                        src="/assets/fumu_guy.png"
+                        src={`${publicBasePath}/assets/fumu_guy.png`}
                         alt="FUMU mascot"
                         width={330}
                         height={330}

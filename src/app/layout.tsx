@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Kanit, Space_Mono } from "next/font/google";
 import "./globals.css";
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const kanit = Kanit({
   variable: "--font-kanit",
   weight: ["400", "600", "800"],
@@ -18,9 +20,9 @@ export const metadata: Metadata = {
   title: "FUMU",
   description: "FUMU chili oil",
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: `${publicBasePath}/icon.png`,
+    shortcut: `${publicBasePath}/icon.png`,
+    apple: `${publicBasePath}/icon.png`,
   },
 };
 

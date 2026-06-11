@@ -1,6 +1,8 @@
 import type { JSX } from "react";
 import Image from "next/image";
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const navLinks = [
     { href: "#home", label: "HOME" },
     { href: "#about", label: "ABOUT" },
@@ -14,7 +16,7 @@ export function SiteHeader(): JSX.Element {
             <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-6 py-4 sm:px-10 lg:px-16">
                 <a href="#home" className="flex items-center gap-3 font-sans text-3xl font-black tracking-tighter">
                     <Image
-                        src="/assets/fumu_guy.png"
+                        src={`${publicBasePath}/assets/fumu_guy.png`}
                         alt="FUMU mascot"
                         width={44}
                         height={44}
