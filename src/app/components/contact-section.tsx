@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 export function ContactSection(): JSX.Element {
     return (
-        <section id="contact" className="mt-10 rounded-none border border-black">
+        <section id="contact" className="mt-16 w-full rounded-none border border-black lg:mt-24 xl:mx-auto xl:w-[calc(50%+100px)]">
             <div className="border-b border-black px-6 py-4">
                 <h2 className="font-sans text-3xl font-black tracking-tighter">CONTACT</h2>
             </div>
@@ -12,13 +12,13 @@ export function ContactSection(): JSX.Element {
                     <div className="mt-3 space-y-2">
                         <a
                             href="mailto:hello@fumu.co"
-                            className="block rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
+                            className="motion-lift block rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
                         >
                             hello@fumu.co
                         </a>
                         <a
                             href="#"
-                            className="block rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
+                            className="motion-lift block rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
                         >
                             Instagram
                         </a>
@@ -50,8 +50,8 @@ export function ContactSection(): JSX.Element {
                         />
                     </label>
                     <button
-                        type="submit"
-                        className="w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black"
+                        type="button"
+                        className="motion-lift w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black"
                     >
                         Send
                     </button>

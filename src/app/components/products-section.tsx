@@ -2,6 +2,7 @@
 
 import { useState, type JSX } from "react";
 import { ProductDetailsModal } from "./product-details-modal";
+import { ScrollReveal } from "./scroll-reveal";
 import type { Product } from "../types/product";
 
 interface ProductsSectionProps {
@@ -22,7 +23,7 @@ function ProductCard({ product, onFindOutMore }: { product: Product; onFindOutMo
                 <button
                     type="button"
                     onClick={() => onFindOutMore(product)}
-                    className="rounded-none border border-black px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
+                    className="motion-lift rounded-none border border-black px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
                 >
                     Find out more
                 </button>
@@ -36,13 +37,15 @@ export function ProductsSection({ products }: ProductsSectionProps): JSX.Element
 
     return (
         <>
-            <section id="products" className="mt-10 w-full rounded-none border border-black xl:mx-auto xl:w-1/2">
+            <section id="products" className="mt-16 w-full rounded-none border border-black lg:mt-24 xl:mx-auto xl:w-1/2">
                 <div className="border-b border-black px-6 py-4">
                     <h2 className="font-sans text-3xl font-black tracking-tighter">PRODUCT LINE</h2>
                 </div>
                 <div className="grid grid-cols-1 divide-y divide-black">
-                    {products.map((product) => (
-                        <ProductCard key={product.name} product={product} onFindOutMore={setSelectedProduct} />
+                    {products.map((product, index) => (
+                        <ScrollReveal key={product.name} delayMs={index * 90} threshold={0.1}>
+                            <ProductCard product={product} onFindOutMore={setSelectedProduct} />
+                        </ScrollReveal>
                     ))}
                 </div>
             </section>

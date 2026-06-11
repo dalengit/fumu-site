@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 export function SiteFooter(): JSX.Element {
     return (
-        <footer className="mt-10 rounded-none px-6 py-4">
+        <footer className="mt-16 rounded-none px-6 py-4 lg:mt-24">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
                     Batch_004 | next drop 2026-06-21 09:00 UTC
@@ -10,13 +10,13 @@ export function SiteFooter(): JSX.Element {
                 <div className="flex items-center gap-2">
                     <a
                         href="#"
-                        className="rounded-none px-3 py-1 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
+                        className="motion-lift rounded-none px-3 py-1 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
                     >
                         Terms
                     </a>
                     <a
                         href="#"
-                        className="rounded-none px-3 py-1 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
+                        className="motion-lift rounded-none px-3 py-1 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
                     >
                         Privacy
                     </a>

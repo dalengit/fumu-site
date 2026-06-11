@@ -4,7 +4,7 @@ const aboutItems = ["Small-batch production", "Real ingredients", "Hand bottled"
 
 export function AboutSection(): JSX.Element {
     return (
-        <section id="about" className="mt-10 rounded-none">
+        <section id="about" className="mt-16 w-full rounded-none lg:mt-24 xl:mx-auto xl:w-[calc(50%+100px)]">
             <div className="px-6 py-4">
                 <h2 className="font-sans text-3xl font-black tracking-tighter">ABOUT</h2>
             </div>
