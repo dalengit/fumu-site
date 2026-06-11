@@ -5,20 +5,19 @@ export function HeroSection(): JSX.Element {
     return (
         <section
             id="home"
-            className="anim-up grid grid-cols-1 gap-8 rounded-none p-6 lg:grid-cols-12 lg:gap-10 lg:p-8"
+            className="anim-up grid grid-cols-1 gap-6 rounded-none px-6 py-4 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:py-5"
         >
-            <div className="space-y-6 text-center lg:col-span-12">
-                <p className="anim-up delay-1 font-mono text-xs uppercase tracking-widest text-neutral-600">Craft Asian Foods</p>
-                <div className="mascot-float mx-auto w-full max-w-[260px] sm:max-w-[320px]">
+            <div className="space-y-4 text-center lg:col-span-12">
+                <div className="mascot-float mx-auto w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[330px]">
                     <Image
                         src="/assets/fumu_guy.png"
                         alt="FUMU mascot"
-                        width={320}
-                        height={320}
+                        width={330}
+                        height={330}
                         className="h-auto w-full object-contain"
                     />
                 </div>
-                <h1 className="anim-up delay-3 mx-auto w-3/4 font-sans text-[clamp(6rem,22vw,18rem)] font-black leading-none tracking-tighter">FUMU</h1>
+                <h1 className="anim-up delay-3 mx-auto w-3/4 font-sans text-[clamp(4.75rem,16vw,11rem)] font-black leading-none tracking-tighter">FUMU</h1>
                 <p className="anim-up delay-4 mx-auto max-w-md text-base">Small-batch Asian condiments.</p>
                 <div className="anim-up delay-4 flex flex-wrap justify-center gap-3">
                     <button

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, type JSX } from "react";
+import { createPortal } from "react-dom";
 import type { Product } from "../types/product";
 
 interface ProductDetailsModalProps {
@@ -33,14 +34,14 @@ export function ProductDetailsModal({ product, onClose }: ProductDetailsModalPro
         return null;
     }
 
-    return (
+    return createPortal(
         <div
             className="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4"
             role="dialog"
             aria-modal="true"
             onClick={onClose}
         >
-            <div className="modal-panel w-full max-w-xl rounded-none border border-black bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
+            <div className="modal-panel w-full max-w-xl rounded-none border border-black bg-white p-6 text-black shadow-2xl" onClick={(event) => event.stopPropagation()}>
                 <div className="flex items-start justify-between gap-4">
                     <div>
                         <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Product Details</p>
@@ -66,6 +67,7 @@ export function ProductDetailsModal({ product, onClose }: ProductDetailsModalPro
                     </p>
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body,
     );
 }
