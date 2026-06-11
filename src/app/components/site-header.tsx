@@ -43,20 +43,6 @@ export function SiteHeader(): JSX.Element {
                 </nav>
             </div>
 
-            <nav
-                className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-4 border border-black bg-white/95 p-1 backdrop-blur-sm sm:hidden"
-                aria-label="Mobile quick navigation"
-            >
-                {navLinks.map((link) => (
-                    <a
-                        key={`dock-${link.href}`}
-                        href={link.href}
-                        className="motion-lift flex min-h-11 items-center justify-center px-2 py-2 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-neutral-700 transition-colors hover:bg-black hover:text-white"
-                    >
-                        {link.label}
-                    </a>
-                ))}
-            </nav>
         </header>
     );
 }
