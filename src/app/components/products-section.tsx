@@ -23,7 +23,7 @@ function ProductCard({ product, onFindOutMore }: { product: Product; onFindOutMo
                 <button
                     type="button"
                     onClick={() => onFindOutMore(product)}
-                    className="motion-lift rounded-none border border-black px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
+                    className="motion-lift min-h-11 w-full rounded-none border border-black px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white sm:w-auto"
                 >
                     Find out more
                 </button>

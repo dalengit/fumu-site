@@ -12,13 +12,13 @@ export function ContactSection(): JSX.Element {
                     <div className="mt-3 space-y-2">
                         <a
                             href="mailto:hello@fumu.co"
-                            className="motion-lift block rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
+                            className="motion-lift flex min-h-11 items-center rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
                         >
                             hello@fumu.co
                         </a>
                         <a
                             href="#"
-                            className="motion-lift block rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
+                            className="motion-lift flex min-h-11 items-center rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
                         >
                             Instagram
                         </a>
@@ -31,7 +31,7 @@ export function ContactSection(): JSX.Element {
                         <input
                             type="text"
                             placeholder="Your name"
-                            className="w-full rounded-none border border-black bg-white px-3 py-2 text-sm text-black placeholder:text-neutral-500 focus:border-red-600 focus:outline-none transition-colors"
+                            className="w-full rounded-none border border-black bg-white px-3 py-3 text-base text-black placeholder:text-neutral-500 focus:border-red-600 focus:outline-none transition-colors md:py-2 md:text-sm"
                         />
                     </label>
                     <label className="block">
@@ -39,19 +39,19 @@ export function ContactSection(): JSX.Element {
                         <input
                             type="email"
                             placeholder="you@domain.com"
-                            className="w-full rounded-none border border-black bg-white px-3 py-2 text-sm text-black placeholder:text-neutral-500 focus:border-red-600 focus:outline-none transition-colors"
+                            className="w-full rounded-none border border-black bg-white px-3 py-3 text-base text-black placeholder:text-neutral-500 focus:border-red-600 focus:outline-none transition-colors md:py-2 md:text-sm"
                         />
                     </label>
                     <label className="block">
                         <span className="mb-2 block font-mono text-xs uppercase tracking-widest text-neutral-600">Message</span>
                         <textarea
                             placeholder="Wholesale, collabs, press"
-                            className="min-h-28 w-full rounded-none border border-black bg-white px-3 py-2 text-sm text-black placeholder:text-neutral-500 focus:border-red-600 focus:outline-none transition-colors"
+                            className="min-h-32 w-full rounded-none border border-black bg-white px-3 py-3 text-base text-black placeholder:text-neutral-500 focus:border-red-600 focus:outline-none transition-colors md:min-h-28 md:py-2 md:text-sm"
                         />
                     </label>
                     <button
                         type="button"
-                        className="motion-lift w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black md:w-auto"
+                        className="motion-lift min-h-11 w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black md:w-auto"
                     >
                         Send
                     </button>
