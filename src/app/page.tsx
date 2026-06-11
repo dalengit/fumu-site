@@ -13,7 +13,7 @@ export default function Page(): JSX.Element {
     <main className="min-h-screen w-full text-black">
       <SiteHeader />
 
-      <div className="mx-auto flex w-full max-w-[1600px] flex-col px-6 py-12 sm:px-10 lg:px-16">
+      <div className="mx-auto flex w-full max-w-[1600px] flex-col px-4 py-8 sm:px-8 sm:py-10 lg:px-16 lg:py-12">
         <HeroSection />
         <ScrollReveal>
           <AboutSection />

@@ -2,12 +2,12 @@ import type { JSX } from "react";
 
 export function ContactSection(): JSX.Element {
     return (
-        <section id="contact" className="mt-16 w-full rounded-none border border-black lg:mt-24 xl:mx-auto xl:w-[calc(50%+100px)]">
-            <div className="border-b border-black px-6 py-4">
-                <h2 className="font-sans text-3xl font-black tracking-tighter">CONTACT</h2>
+        <section id="contact" className="mt-12 w-full rounded-none border border-black sm:mt-16 lg:mt-24 xl:mx-auto xl:w-[calc(50%+100px)]">
+            <div className="border-b border-black px-4 py-4 sm:px-6">
+                <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">CONTACT</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12">
-                <div className="border-b border-black px-6 py-6 md:col-span-4 md:border-b-0 md:border-r">
+                <div className="border-b border-black px-4 py-5 sm:px-6 sm:py-6 md:col-span-4 md:border-b-0 md:border-r">
                     <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Direct</p>
                     <div className="mt-3 space-y-2">
                         <a
@@ -25,7 +25,7 @@ export function ContactSection(): JSX.Element {
                     </div>
                 </div>
 
-                <form className="grid grid-cols-1 gap-3 px-6 py-6 md:col-span-8">
+                <form className="grid grid-cols-1 gap-3 px-4 py-5 sm:px-6 sm:py-6 md:col-span-8">
                     <label className="block">
                         <span className="mb-2 block font-mono text-xs uppercase tracking-widest text-neutral-600">Name</span>
                         <input
@@ -51,7 +51,7 @@ export function ContactSection(): JSX.Element {
                     </label>
                     <button
                         type="button"
-                        className="motion-lift w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black"
+                        className="motion-lift w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black md:w-auto"
                     >
                         Send
                     </button>

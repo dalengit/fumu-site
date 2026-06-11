@@ -11,9 +11,9 @@ interface ProductsSectionProps {
 
 function ProductCard({ product, onFindOutMore }: { product: Product; onFindOutMore: (product: Product) => void }): JSX.Element {
     return (
-        <article className="flex flex-col gap-6 px-6 py-6">
+        <article className="flex flex-col gap-4 px-4 py-5 sm:gap-6 sm:px-6 sm:py-6">
             <div className="space-y-2">
-                <h3 className="font-sans text-2xl font-black tracking-tighter">{product.name}</h3>
+                <h3 className="font-sans text-xl font-black tracking-tighter sm:text-2xl">{product.name}</h3>
                 <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
                     Heat {product.heat} | {product.size}
                 </p>
@@ -37,9 +37,9 @@ export function ProductsSection({ products }: ProductsSectionProps): JSX.Element
 
     return (
         <>
-            <section id="products" className="mt-16 w-full rounded-none border border-black lg:mt-24 xl:mx-auto xl:w-1/2">
-                <div className="border-b border-black px-6 py-4">
-                    <h2 className="font-sans text-3xl font-black tracking-tighter">PRODUCT LINE</h2>
+            <section id="products" className="mt-12 w-full rounded-none border border-black sm:mt-16 lg:mt-24 xl:mx-auto xl:w-1/2">
+                <div className="border-b border-black px-4 py-4 sm:px-6">
+                    <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">PRODUCT LINE</h2>
                 </div>
                 <div className="grid grid-cols-1 divide-y divide-black">
                     {products.map((product, index) => (

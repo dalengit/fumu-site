@@ -4,14 +4,14 @@ const aboutItems = ["Small-batch production", "Real ingredients", "Hand bottled"
 
 export function AboutSection(): JSX.Element {
     return (
-        <section id="about" className="mt-16 w-full rounded-none lg:mt-24 xl:mx-auto xl:w-[calc(50%+100px)]">
-            <div className="px-6 py-4">
-                <h2 className="font-sans text-3xl font-black tracking-tighter">ABOUT</h2>
+        <section id="about" className="mt-12 w-full rounded-none sm:mt-16 lg:mt-24 xl:mx-auto xl:w-[calc(50%+100px)]">
+            <div className="px-4 py-4 sm:px-6">
+                <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">ABOUT</h2>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-3">
                 {aboutItems.map((item) => (
-                    <li key={item} className="px-6 py-6">
-                        <p className="font-sans text-xl font-black tracking-tighter">{item}</p>
+                    <li key={item} className="px-4 py-5 sm:px-6 sm:py-6">
+                        <p className="font-sans text-lg font-black tracking-tighter sm:text-xl">{item}</p>
                         <p className="mt-3 text-sm leading-relaxed text-neutral-700">
                             Built for bold flavor-first cooking, every batch is tuned for depth, texture, and everyday use.
                         </p>
@@ -19,7 +19,7 @@ export function AboutSection(): JSX.Element {
                 ))}
             </ul>
 
-            <div className="grid grid-cols-1 gap-6 px-6 py-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 px-4 py-5 sm:px-6 sm:py-6 md:grid-cols-2">
                 <div className="space-y-3">
                     <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Our approach</p>
                     <p className="text-sm leading-relaxed text-neutral-700">
