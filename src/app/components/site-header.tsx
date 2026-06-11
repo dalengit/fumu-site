@@ -1,4 +1,6 @@
 import type { JSX } from "react";
+import Image from "next/image";
+import fumuGuy from "../../../assets/fumu_guy.png";
 
 const navLinks = [
     { href: "#home", label: "HOME" },
@@ -11,7 +13,15 @@ export function SiteHeader(): JSX.Element {
     return (
         <header className="sticky top-0 z-50 bg-white">
             <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-6 py-4 sm:px-10 lg:px-16">
-                <a href="#home" className="font-sans text-3xl font-black tracking-tighter">
+                <a href="#home" className="flex items-center gap-3 font-sans text-3xl font-black tracking-tighter">
+                    <Image
+                        src={fumuGuy}
+                        alt="FUMU mascot"
+                        width={44}
+                        height={44}
+                        className="h-11 w-11 object-cover"
+                        priority
+                    />
                     FUMU
                 </a>
                 <nav className="flex items-center gap-2">
