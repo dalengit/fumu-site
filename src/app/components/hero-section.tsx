@@ -9,12 +9,12 @@ export function HeroSection(): JSX.Element {
             className="grid grid-cols-1 gap-8 rounded-none p-6 lg:grid-cols-12 lg:gap-10 lg:p-8"
         >
             <div className="space-y-6 text-center lg:col-span-12">
-                <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Independent chili oil</p>
-                <h1 className="mx-auto w-3/4 font-sans text-[clamp(6rem,22vw,18rem)] font-black leading-none tracking-tighter">FUMU</h1>
-                <div className="mx-auto w-full max-w-[280px] sm:max-w-[340px]">
+                <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Craft Asian Foods</p>
+                <div className="mx-auto w-full max-w-[220px] sm:max-w-[280px]">
                     <Image src={fumuGuy} alt="FUMU mascot" className="h-auto w-full object-contain" priority />
                 </div>
-                <p className="mx-auto max-w-md text-base">Small-batch chili oil.</p>
+                <h1 className="mx-auto w-3/4 font-sans text-[clamp(6rem,22vw,18rem)] font-black leading-none tracking-tighter">FUMU</h1>
+                <p className="mx-auto max-w-md text-base">Small-batch Asian condiments.</p>
                 <div className="flex flex-wrap justify-center gap-3">
                     <button
                         type="button"
