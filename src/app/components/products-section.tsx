@@ -11,9 +11,9 @@ interface ProductsSectionProps {
 
 function ProductCard({ product, onFindOutMore }: { product: Product; onFindOutMore: (product: Product) => void }): JSX.Element {
     return (
-        <article className="flex flex-col gap-4 px-4 py-5 sm:gap-6 sm:px-6 sm:py-6">
+        <article className="flex flex-col gap-3 px-4 py-4 sm:gap-5 sm:px-6 sm:py-5">
             <div className="space-y-2">
-                <h3 className="font-sans text-xl font-black tracking-tighter sm:text-2xl">{product.name}</h3>
+                <h3 className="font-sans text-lg font-black tracking-tighter sm:text-xl">{product.name}</h3>
                 <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
                     Heat {product.heat} | {product.size}
                 </p>
@@ -37,9 +37,9 @@ export function ProductsSection({ products }: ProductsSectionProps): JSX.Element
 
     return (
         <>
-            <section id="products" className="mt-12 w-full scroll-mt-32 rounded-none border border-black sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-[calc(50%+260px)]">
+            <section id="products" className="mt-10 w-full scroll-mt-28 rounded-none border border-black sm:mt-14 sm:scroll-mt-24 lg:mt-20 xl:mx-auto xl:w-[calc(50%+220px)]">
                 <div className="border-b border-black px-4 py-4 sm:px-6">
-                    <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-5xl">PRODUCT LINE</h2>
+                    <h2 className="font-sans text-xl font-black tracking-tighter sm:text-4xl">PRODUCT LINE</h2>
                 </div>
                 <div className="grid grid-cols-1 divide-y divide-black">
                     {products.map((product, index) => (

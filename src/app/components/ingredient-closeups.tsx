@@ -40,12 +40,12 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
       <section
         id="gallery"
         aria-labelledby="gallery-heading"
-        className="mt-12 w-full scroll-mt-32 border border-black sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-[calc(50%+260px)]"
+        className="mt-10 w-full scroll-mt-28 border border-black sm:mt-14 sm:scroll-mt-24 lg:mt-20 xl:mx-auto xl:w-[calc(50%+220px)]"
       >
         <div className="border-b border-black px-4 py-4 sm:px-6">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <h2 id="gallery-heading" className="font-sans text-2xl font-black tracking-tighter sm:text-5xl">GALLERY</h2>
+              <h2 id="gallery-heading" className="font-sans text-xl font-black tracking-tighter sm:text-4xl">GALLERY</h2>
               <p className="mt-3 text-sm text-neutral-700">Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.</p>
             </div>
             <GalleryNavButtons
@@ -58,10 +58,10 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
           </div>
         </div>
 
-        <div className="px-4 py-5 sm:px-6 sm:py-6">
+        <div className="px-4 py-4 sm:px-6 sm:py-5">
           <div ref={carouselRef} onScroll={recenterLoopIfNeeded} className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
             {loopedItems.map((entry) => (
-              <figure key={entry.key} className="w-[300px] shrink-0 snap-start sm:w-[360px] lg:w-[420px]">
+              <figure key={entry.key} className="w-[260px] shrink-0 snap-start sm:w-[320px] lg:w-[380px]">
                 <button
                   type="button"
                   onClick={() => setSelectedIndex(entry.sourceIndex)}
@@ -74,7 +74,7 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
                       alt={`${entry.item.alt}. ${entry.item.note}`}
                       width={entry.item.width}
                       height={entry.item.height}
-                      sizes="(max-width: 640px) 300px, (max-width: 1024px) 360px, 420px"
+                      sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 380px"
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                   </div>
