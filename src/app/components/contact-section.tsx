@@ -9,15 +9,20 @@ export function ContactSection(): JSX.Element {
             <div className="grid grid-cols-1 md:grid-cols-12">
                 <div className="border-b border-black px-4 py-5 sm:px-6 sm:py-6 md:col-span-4 md:border-b-0 md:border-r">
                     <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Direct</p>
+                    <p className="mt-2 text-sm text-neutral-700">FUMU Manchester, UK | Asian condiments Manchester</p>
                     <div className="mt-3 space-y-2">
                         <a
                             href="mailto:hello@fumu.co"
+                            aria-label="Email FUMU at hello@fumu.co"
                             className="motion-lift flex min-h-11 items-center rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
                         >
                             hello@fumu.co
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/fumu.chilli/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Visit FUMU on Instagram"
                             className="motion-lift flex min-h-11 items-center rounded-none border border-black px-3 py-2 text-sm transition-colors hover:bg-black hover:text-white"
                         >
                             Instagram

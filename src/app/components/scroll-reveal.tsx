@@ -33,7 +33,7 @@ export function ScrollReveal({ children, className = "", delayMs = 0, threshold 
         observer.observe(target);
 
         return () => observer.disconnect();
-    }, []);
+    }, [threshold]);
 
     return (
         <div

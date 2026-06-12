@@ -13,27 +13,30 @@ export function HeroSection(): JSX.Element {
                 <div className="mascot-float mx-auto w-full max-w-[180px] sm:max-w-[260px] lg:max-w-[330px]">
                     <Image
                         src={`${publicBasePath}/assets/fumu_guy.png`}
-                        alt="FUMU mascot"
+                        alt="FUMU chilli oil mascot logo"
                         width={330}
                         height={330}
+                        priority
                         className="h-auto w-full object-contain"
                     />
                 </div>
                 <h1 className="anim-up delay-3 mx-auto w-full font-sans text-[clamp(3.2rem,22vw,11rem)] font-black leading-none tracking-tighter sm:w-3/4">FUMU</h1>
-                <p className="anim-up delay-4 mx-auto max-w-md text-sm sm:text-base">Small-batch Asian condiments.</p>
+                <p className="anim-up delay-4 mx-auto max-w-md text-sm sm:text-base">FUMU chilli oil, handmade in Manchester. Small-batch Asian condiments for bold everyday cooking.</p>
                 <div className="anim-up delay-4 mx-auto flex w-full max-w-[280px] flex-col justify-center gap-3 sm:max-w-none sm:flex-row">
-                    <button
-                        type="button"
+                    <a
+                        href="#products"
+                        aria-label="Browse FUMU product line"
                         className="motion-lift w-full rounded-none bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:bg-black sm:w-auto"
                     >
                         Shop Drop
-                    </button>
-                    <button
-                        type="button"
+                    </a>
+                    <a
+                        href="#contact"
+                        aria-label="Join the FUMU stock alert list"
                         className="motion-lift w-full rounded-none px-4 py-2 font-sans font-black tracking-tighter transition-colors hover:bg-black hover:text-white sm:w-auto"
                     >
                         Join List
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
