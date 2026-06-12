@@ -4,7 +4,6 @@ import { AboutSection } from "./components/about-section";
 import { ContactSection } from "./components/contact-section";
 import { HeroSection } from "./components/hero-section";
 import { IngredientCloseups } from "./components/ingredient-closeups";
-import { LifestyleGallery } from "./components/lifestyle-gallery";
 import { ProductsSection } from "./components/products-section";
 import { ProductPhotoSpotlight } from "./components/product-photo-spotlight";
 import { ScrollReveal } from "./components/scroll-reveal";
@@ -13,7 +12,6 @@ import { SiteHeader } from "./components/site-header";
 import { products } from "./data/products";
 import {
   ingredientCloseupItems,
-  lifestylePhotoItems,
   productPhotoSpotlightContent,
 } from "./data/site-content";
 import { siteConfig } from "./site-config";
@@ -21,7 +19,7 @@ import { siteConfig } from "./site-config";
 export const metadata: Metadata = {
   title: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
   description:
-    "Explore FUMU chilli oil in Manchester, including product photography, ingredient highlights, and the full small-batch product line.",
+    "Explore FUMU chilli oil in Manchester, including product photography, gallery highlights, and the full small-batch product line.",
   alternates: {
     canonical: siteConfig.canonicalPath,
   },
@@ -57,7 +55,7 @@ export default function Page(): JSX.Element {
     name: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
     url: siteConfig.homeUrl,
     description:
-      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments, product photography, ingredient highlights, and product details.",
+      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments, product photography, gallery highlights, and product details.",
     primaryImageOfPage: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.png`,
     inLanguage: "en-GB",
     about: [
@@ -84,9 +82,6 @@ export default function Page(): JSX.Element {
         <HeroSection />
         <ScrollReveal>
           <ProductPhotoSpotlight content={productPhotoSpotlightContent} />
-        </ScrollReveal>
-        <ScrollReveal>
-          <LifestyleGallery items={lifestylePhotoItems} />
         </ScrollReveal>
         <ScrollReveal>
           <IngredientCloseups items={ingredientCloseupItems} />

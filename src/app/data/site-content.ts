@@ -1,6 +1,5 @@
 import type {
   IngredientCloseupItem,
-  LifestylePhotoItem,
   ProductPhotoSpotlightContent,
 } from "../types/content";
 import { siteConfig } from "../site-config";
@@ -28,46 +27,6 @@ export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
     caption: "Secondary angle detail",
   },
 };
-
-export const lifestylePhotoItems: ReadonlyArray<LifestylePhotoItem> = [
-  {
-    ...mascotImage,
-    title: "Noodles",
-    caption: "FUMU chilli oil over quick noodles.",
-  },
-  {
-    src: assetPath("/paper-texture-4.jpg"),
-    alt: "FUMU chilli oil serving idea for dumplings",
-    width: 1200,
-    height: 900,
-    title: "Dumplings",
-    caption: "Dumpling dip heat boost.",
-  },
-  {
-    src: assetPath("/fumu-hero-grit.svg"),
-    alt: "FUMU chilli oil serving idea for eggs",
-    width: 1200,
-    height: 900,
-    title: "Eggs",
-    caption: "Crisp chilli finish on eggs.",
-  },
-  {
-    src: assetPath("/window.svg"),
-    alt: "FUMU chilli oil serving idea for rice bowls",
-    width: 1200,
-    height: 900,
-    title: "Rice bowls",
-    caption: "Layered umami for rice bowls.",
-  },
-  {
-    src: assetPath("/globe.svg"),
-    alt: "FUMU chilli oil serving idea for stir-fries",
-    width: 1200,
-    height: 900,
-    title: "Stir-fries",
-    caption: "Wok-friendly chilli oil lift.",
-  },
-];
 
 export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
   {
@@ -101,5 +60,53 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     height: 900,
     title: "Oil texture",
     note: "Silky texture designed to coat and cling.",
+  },
+  {
+    src: assetPath("/window.svg"),
+    alt: "Close-up visual representing fermented depth",
+    width: 900,
+    height: 900,
+    title: "Fermented depth",
+    note: "Fermented notes add savoury backbone and depth.",
+  },
+  {
+    src: assetPath("/globe.svg"),
+    alt: "Close-up visual representing balanced heat",
+    width: 900,
+    height: 900,
+    title: "Balanced heat",
+    note: "Heat is calibrated for flavour-first cooking.",
+  },
+  {
+    src: assetPath("/fumu-hero-grit.svg"),
+    alt: "Close-up visual representing chilli crunch",
+    width: 900,
+    height: 900,
+    title: "Chilli crunch",
+    note: "Textural crunch gives every bite more character.",
+  },
+  {
+    src: assetPath("/next.svg"),
+    alt: "Close-up visual representing aroma lift",
+    width: 900,
+    height: 900,
+    title: "Aroma lift",
+    note: "Aromatic top-notes stay present after cooking.",
+  },
+  {
+    src: assetPath("/paper-texture-4.jpg"),
+    alt: "Close-up visual representing umami layer",
+    width: 900,
+    height: 900,
+    title: "Umami layer",
+    note: "Layered umami rounds out the chilli profile.",
+  },
+  {
+    src: assetPath("/file.svg"),
+    alt: "Close-up visual representing finish and cling",
+    width: 900,
+    height: 900,
+    title: "Finish and cling",
+    note: "Oil body clings to noodles, eggs, and rice.",
   },
 ];

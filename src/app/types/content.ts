@@ -14,10 +14,6 @@ export interface ProductPhotoSpotlightContent {
   secondaryImage?: MediaAsset;
 }
 
-export interface LifestylePhotoItem extends MediaAsset {
-  title: string;
-}
-
 export interface IngredientCloseupItem extends MediaAsset {
   title: string;
   note: string;
