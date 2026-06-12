@@ -1,13 +1,31 @@
 import type { JSX } from "react";
+import type { Metadata } from "next";
 import { AboutSection } from "./components/about-section";
 import { ContactSection } from "./components/contact-section";
 import { HeroSection } from "./components/hero-section";
+import { IngredientCloseups } from "./components/ingredient-closeups";
+import { LifestyleGallery } from "./components/lifestyle-gallery";
 import { ProductsSection } from "./components/products-section";
+import { ProductPhotoSpotlight } from "./components/product-photo-spotlight";
 import { ScrollReveal } from "./components/scroll-reveal";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { products } from "./data/products";
+import {
+  ingredientCloseupItems,
+  lifestylePhotoItems,
+  productPhotoSpotlightContent,
+} from "./data/site-content";
 import { siteConfig } from "./site-config";
+
+export const metadata: Metadata = {
+  title: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
+  description:
+    "Explore FUMU chilli oil in Manchester, including product photography, serving ideas, ingredient highlights, and the full small-batch product line.",
+  alternates: {
+    canonical: siteConfig.canonicalPath,
+  },
+};
 
 export default function Page(): JSX.Element {
   const productListJsonLd = {
@@ -24,6 +42,7 @@ export default function Page(): JSX.Element {
         description: product.note,
         category: "Asian condiments",
         size: product.size,
+        image: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.png`,
         brand: {
           "@type": "Brand",
           name: "FUMU",
@@ -32,16 +51,46 @@ export default function Page(): JSX.Element {
     })),
   };
 
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
+    url: siteConfig.homeUrl,
+    description:
+      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments, product photography, ingredient highlights, and serving inspiration.",
+    primaryImageOfPage: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.png`,
+    inLanguage: "en-GB",
+    about: [
+      "FUMU chilli oil",
+      "handmade chilli oil Manchester",
+      "small-batch chilli oil UK",
+      "Asian condiments Manchester",
+    ],
+  };
+
   return (
     <main className="min-h-screen w-full text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productListJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <SiteHeader />
 
       <div className="mx-auto flex w-full max-w-[1600px] flex-col px-4 py-8 sm:px-8 sm:py-10 lg:px-16 lg:py-12">
         <HeroSection />
+        <ScrollReveal>
+          <ProductPhotoSpotlight content={productPhotoSpotlightContent} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <LifestyleGallery items={lifestylePhotoItems} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <IngredientCloseups items={ingredientCloseupItems} />
+        </ScrollReveal>
         <ScrollReveal>
           <AboutSection />
         </ScrollReveal>

@@ -28,7 +28,7 @@ export function HeroSection(): JSX.Element {
                         aria-label="Browse FUMU product line"
                         className="motion-lift w-full rounded-none bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:bg-black sm:w-auto"
                     >
-                        Shop Drop
+                        Shop Now
                     </a>
                     <a
                         href="#contact"
