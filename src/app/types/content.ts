@@ -22,3 +22,17 @@ export interface IngredientCloseupItem extends MediaAsset {
   title: string;
   note: string;
 }
+
+export interface RecipeItem {
+  title: string;
+  description: string;
+  time: string;
+}
+
+export interface HowToUseContent {
+  title: string;
+  intro: string;
+  servingIdeas: ReadonlyArray<string>;
+  recipes: ReadonlyArray<RecipeItem>;
+  pairings: ReadonlyArray<string>;
+}

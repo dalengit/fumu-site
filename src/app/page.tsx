@@ -21,7 +21,7 @@ import { siteConfig } from "./site-config";
 export const metadata: Metadata = {
   title: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
   description:
-    "Explore FUMU chilli oil in Manchester, including product photography, serving ideas, ingredient highlights, and the full small-batch product line.",
+    "Explore FUMU chilli oil in Manchester, including product photography, ingredient highlights, and the full small-batch product line.",
   alternates: {
     canonical: siteConfig.canonicalPath,
   },
@@ -57,7 +57,7 @@ export default function Page(): JSX.Element {
     name: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
     url: siteConfig.homeUrl,
     description:
-      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments, product photography, ingredient highlights, and serving inspiration.",
+      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments, product photography, ingredient highlights, and product details.",
     primaryImageOfPage: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.png`,
     inLanguage: "en-GB",
     about: [
