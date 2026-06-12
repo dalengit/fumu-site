@@ -4,8 +4,7 @@ import { siteConfig } from "../site-config";
 
 const navLinks = [
     { href: "#", label: "HOME", ariaLabel: "Scroll to top" },
-    { href: "#photo-spotlight", label: "SPOTLIGHT" },
-    { href: "#products", label: "PRODUCTS" },
+    { href: "#photo-spotlight", label: "PRODUCTS", ariaLabel: "Jump to product spotlight section" },
     { href: "#about", label: "ABOUT" },
     { href: "#gallery", label: "GALLERY" },
     { href: "#contact", label: "CONTACT" },
@@ -31,18 +30,15 @@ export function SiteHeader(): JSX.Element {
                             key={link.href}
                             href={link.href}
                             aria-label={"ariaLabel" in link ? link.ariaLabel : `Jump to ${link.label.toLowerCase()} section`}
-                            className="motion-lift min-h-11 rounded-none px-2 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-700 transition-colors hover:bg-black hover:text-white sm:min-h-0 sm:px-3 sm:py-1 sm:text-xs sm:tracking-widest"
+                            className={`motion-lift min-h-11 rounded-none px-2 py-2 font-mono text-[11px] uppercase tracking-[0.18em] transition-colors sm:min-h-0 sm:px-3 sm:py-1 sm:text-xs sm:tracking-widest ${
+                                link.label === "PRODUCTS"
+                                    ? "bg-red-700 text-white hover:bg-black"
+                                    : "text-neutral-700 hover:bg-black hover:text-white"
+                            }`}
                         >
                             {link.label}
                         </a>
                     ))}
-                    <a
-                        href="#contact"
-                        aria-label="Jump to contact for stock alerts"
-                        className="motion-lift min-h-11 rounded-none bg-red-700 px-2 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-black sm:min-h-0 sm:px-3 sm:py-1 sm:text-xs sm:tracking-widest"
-                    >
-                        STOCK ALERT
-                    </a>
                 </nav>
             </div>
 

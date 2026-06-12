@@ -9,18 +9,11 @@ export function SiteFooter(): JSX.Element {
                 </p>
                 <div className="flex flex-wrap items-center gap-2">
                     <a
-                        href="#products"
-                        aria-label="Browse FUMU products"
+                        href="#"
+                        aria-label="Scroll to top"
                         className="motion-lift rounded-none px-3 py-1 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
                     >
-                        Products
-                    </a>
-                    <a
-                        href="#contact"
-                        aria-label="Contact FUMU"
-                        className="motion-lift rounded-none px-3 py-1 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
-                    >
-                        Contact
+                        Home
                     </a>
                 </div>
             </div>

@@ -23,18 +23,11 @@ export function HeroSection(): JSX.Element {
                 <p className="anim-up delay-4 mx-auto max-w-md text-sm sm:text-base">FUMU chilli oil, handmade in Manchester. Small-batch Asian condiments for bold everyday cooking.</p>
                 <div className="anim-up delay-4 mx-auto flex w-full max-w-[280px] flex-col justify-center gap-3 sm:max-w-none sm:flex-row">
                     <a
-                        href="#products"
-                        aria-label="Browse FUMU product line"
+                        href="#about"
+                        aria-label="Read the FUMU brand story"
                         className="motion-lift w-full rounded-none bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:bg-black sm:w-auto"
                     >
-                        Shop Now
-                    </a>
-                    <a
-                        href="#contact"
-                        aria-label="Join the FUMU stock alert list"
-                        className="motion-lift w-full rounded-none px-4 py-2 font-sans font-black tracking-tighter transition-colors hover:bg-black hover:text-white sm:w-auto"
-                    >
-                        Join List
+                        Read Our Story
                     </a>
                 </div>
             </div>
