@@ -30,7 +30,6 @@ export function ProductPhotoSpotlight({ content }: ProductPhotoSpotlightProps): 
               alt={content.primaryImage.alt}
               width={content.primaryImage.width}
               height={content.primaryImage.height}
-              priority
               sizes="(max-width: 1024px) 100vw, 66vw"
               className="h-full w-full object-cover"
             />

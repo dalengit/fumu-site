@@ -94,9 +94,7 @@ export default function Page(): JSX.Element {
         <ScrollReveal>
           <AboutSection />
         </ScrollReveal>
-        <ScrollReveal>
-          <ProductsSection products={products} />
-        </ScrollReveal>
+        <ProductsSection products={products} />
         <ScrollReveal>
           <ContactSection />
         </ScrollReveal>

@@ -1,13 +1,11 @@
 import type {
-  HowToUseContent,
   IngredientCloseupItem,
   LifestylePhotoItem,
   ProductPhotoSpotlightContent,
 } from "../types/content";
+import { siteConfig } from "../site-config";
 
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-const assetPath = (path: string): string => `${publicBasePath}${path}`;
+const assetPath = (path: string): string => `${siteConfig.basePath}${path}`;
 
 const mascotImage = {
   src: assetPath("/assets/fumu_guy.png"),
@@ -105,39 +103,3 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Silky texture designed to coat and cling.",
   },
 ];
-
-export const howToUseContent: HowToUseContent = {
-  title: "HOW TO USE FUMU",
-  intro:
-    "Use FUMU chilli oil as a finishing layer or mixed base for quick meals. This section is built for scan-fast cooking inspiration.",
-  servingIdeas: [
-    "Drizzle on noodles",
-    "Mix into dips",
-    "Add to marinades",
-    "Top on eggs",
-    "Stir into soups",
-  ],
-  recipes: [
-    {
-      title: "5-minute noodle bowl",
-      description: "Cook noodles, add a spoon of FUMU chilli oil, soy, spring onion, and sesame.",
-      time: "5 min",
-    },
-    {
-      title: "FUMU fried rice",
-      description: "Toss day-old rice with egg, veg, and finish with FUMU for heat and aroma.",
-      time: "12 min",
-    },
-    {
-      title: "Spicy mayo",
-      description: "Whisk mayo with FUMU chilli oil and a squeeze of lime for fries or sandwiches.",
-      time: "3 min",
-    },
-    {
-      title: "Dumpling dipping sauce",
-      description: "Combine light soy, black vinegar, garlic, and FUMU chilli oil.",
-      time: "4 min",
-    },
-  ],
-  pairings: ["Eggs", "Rice", "Dumplings", "Stir-fries", "Grilled meats"],
-};

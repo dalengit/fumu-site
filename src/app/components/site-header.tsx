@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 import Image from "next/image";
-
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { siteConfig } from "../site-config";
 
 const navLinks = [
     { href: "#", label: "HOME", ariaLabel: "Scroll to top" },
@@ -16,7 +15,7 @@ export function SiteHeader(): JSX.Element {
             <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-4 lg:px-16">
                 <a href="#" aria-label="Scroll to top" className="flex items-center gap-2 font-sans text-2xl font-black tracking-tighter sm:gap-3 sm:text-3xl">
                     <Image
-                        src={`${publicBasePath}/assets/fumu_guy.png`}
+                        src={`${siteConfig.basePath}/assets/fumu_guy.png`}
                         alt="FUMU chilli oil mascot mark"
                         width={44}
                         height={44}

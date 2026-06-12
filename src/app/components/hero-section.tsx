@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 import Image from "next/image";
-
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { siteConfig } from "../site-config";
 
 export function HeroSection(): JSX.Element {
     return (
@@ -12,7 +11,7 @@ export function HeroSection(): JSX.Element {
             <div className="space-y-4 text-center lg:col-span-12">
                 <div className="mascot-float mx-auto w-full max-w-[180px] sm:max-w-[260px] lg:max-w-[330px]">
                     <Image
-                        src={`${publicBasePath}/assets/fumu_guy.png`}
+                        src={`${siteConfig.basePath}/assets/fumu_guy.png`}
                         alt="FUMU chilli oil mascot logo"
                         width={330}
                         height={330}
