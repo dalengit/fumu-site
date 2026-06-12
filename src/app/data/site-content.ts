@@ -30,7 +30,7 @@ export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
 
 export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
   {
-    src: assetPath("/assets/fumu_guy.png"),
+    src: assetPath("/assets/round_chilli.png"),
     alt: "Close-up visual representing FUMU chilli blend",
     width: 900,
     height: 900,
@@ -38,7 +38,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Layered chilli profile tuned for heat and aroma.",
   },
   {
-    src: assetPath("/paper-texture-4.jpg"),
+    src: assetPath("/assets/garlic.png"),
     alt: "Close-up visual representing garlic infusion",
     width: 900,
     height: 900,
@@ -46,7 +46,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Garlic depth balances the chilli hit.",
   },
   {
-    src: assetPath("/next.svg"),
+    src: assetPath("/assets/flame_pan.png"),
     alt: "Close-up visual representing aromatic ingredients",
     width: 900,
     height: 900,
@@ -54,7 +54,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Aromatic infusion adds complexity to every spoon.",
   },
   {
-    src: assetPath("/file.svg"),
+    src: assetPath("/assets/round_oil.png"),
     alt: "Close-up visual representing chilli oil texture",
     width: 900,
     height: 900,
@@ -62,15 +62,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Silky texture designed to coat and cling.",
   },
   {
-    src: assetPath("/window.svg"),
-    alt: "Close-up visual representing fermented depth",
-    width: 900,
-    height: 900,
-    title: "Fermented depth",
-    note: "Fermented notes add savoury backbone and depth.",
-  },
-  {
-    src: assetPath("/globe.svg"),
+    src: assetPath("/assets/round_wok_chilli.png"),
     alt: "Close-up visual representing balanced heat",
     width: 900,
     height: 900,
@@ -78,7 +70,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Heat is calibrated for flavour-first cooking.",
   },
   {
-    src: assetPath("/fumu-hero-grit.svg"),
+    src: assetPath("/assets/fried_garlic.png"),
     alt: "Close-up visual representing chilli crunch",
     width: 900,
     height: 900,
@@ -86,7 +78,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Textural crunch gives every bite more character.",
   },
   {
-    src: assetPath("/next.svg"),
+    src: assetPath("/assets/landscape_kitchen.png"),
     alt: "Close-up visual representing aroma lift",
     width: 900,
     height: 900,
@@ -94,7 +86,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Aromatic top-notes stay present after cooking.",
   },
   {
-    src: assetPath("/paper-texture-4.jpg"),
+    src: assetPath("/assets/portrait_kitchen.png"),
     alt: "Close-up visual representing umami layer",
     width: 900,
     height: 900,
@@ -102,7 +94,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     note: "Layered umami rounds out the chilli profile.",
   },
   {
-    src: assetPath("/file.svg"),
+    src: assetPath("/assets/spron.png"),
     alt: "Close-up visual representing finish and cling",
     width: 900,
     height: 900,
