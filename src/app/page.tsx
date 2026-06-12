@@ -83,13 +83,13 @@ export default function Page(): JSX.Element {
         <ScrollReveal>
           <ProductPhotoSpotlight content={productPhotoSpotlightContent} />
         </ScrollReveal>
-        <ScrollReveal>
-          <IngredientCloseups items={ingredientCloseupItems} />
-        </ScrollReveal>
+        <ProductsSection products={products} />
         <ScrollReveal>
           <AboutSection />
         </ScrollReveal>
-        <ProductsSection products={products} />
+        <ScrollReveal>
+          <IngredientCloseups items={ingredientCloseupItems} />
+        </ScrollReveal>
         <ScrollReveal>
           <ContactSection />
         </ScrollReveal>

@@ -4,8 +4,10 @@ import { siteConfig } from "../site-config";
 
 const navLinks = [
     { href: "#", label: "HOME", ariaLabel: "Scroll to top" },
-    { href: "#about", label: "ABOUT" },
+    { href: "#photo-spotlight", label: "SPOTLIGHT" },
     { href: "#products", label: "PRODUCTS" },
+    { href: "#about", label: "ABOUT" },
+    { href: "#gallery", label: "GALLERY" },
     { href: "#contact", label: "CONTACT" },
 ] as const;
 
