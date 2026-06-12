@@ -7,11 +7,7 @@ import { ScrollReveal } from "./components/scroll-reveal";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { products } from "./data/products";
-
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fumu.co";
-const normalizedSiteUrl = siteUrl.replace(/\/$/, "");
-const homepageUrl = `${normalizedSiteUrl}${publicBasePath}/`;
+import { siteConfig } from "./site-config";
 
 export default function Page(): JSX.Element {
   const productListJsonLd = {
@@ -21,7 +17,7 @@ export default function Page(): JSX.Element {
     itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: `${homepageUrl}#products`,
+      url: `${siteConfig.homeUrl}#products`,
       item: {
         "@type": "Product",
         name: `FUMU ${product.name}`,

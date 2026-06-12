@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
 import { Kanit, Space_Mono } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "./site-config";
 
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fumu.co";
-const normalizedSiteUrl = siteUrl.replace(/\/$/, "");
-const canonicalPath = publicBasePath ? `${publicBasePath}/` : "/";
-const ogImagePath = `${publicBasePath}/assets/fumu_guy.png`;
+const ogImagePath = `${siteConfig.basePath}/assets/fumu_guy.png`;
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "FUMU",
   alternateName: "FUMU Manchester",
-  image: `${normalizedSiteUrl}${ogImagePath}`,
-  url: `${normalizedSiteUrl}${canonicalPath}`,
+  image: `${siteConfig.siteOrigin}${ogImagePath}`,
+  url: siteConfig.homeUrl,
   description:
     "FUMU chilli oil is handmade in Manchester, UK. Small-batch Asian condiments built for bold flavour and everyday cooking.",
   areaServed: ["Manchester", "United Kingdom"],
@@ -39,7 +36,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(normalizedSiteUrl),
+  metadataBase: new URL(siteConfig.siteOrigin),
   title: {
     default: "FUMU Manchester | Small-batch Chilli Oil UK",
     template: "%s | FUMU",
@@ -55,12 +52,12 @@ export const metadata: Metadata = {
     "FUMU Manchester",
   ],
   alternates: {
-    canonical: canonicalPath,
+    canonical: siteConfig.canonicalPath,
   },
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: canonicalPath,
+    url: siteConfig.canonicalPath,
     siteName: "FUMU",
     title: "FUMU Manchester | Small-batch Chilli Oil UK",
     description:
@@ -93,9 +90,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: `${publicBasePath}/icon.png`,
-    shortcut: `${publicBasePath}/icon.png`,
-    apple: `${publicBasePath}/icon.png`,
+    icon: `${siteConfig.basePath}/icon.png`,
+    shortcut: `${siteConfig.basePath}/icon.png`,
+    apple: `${siteConfig.basePath}/icon.png`,
   },
 };
 
