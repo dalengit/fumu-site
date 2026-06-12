@@ -37,7 +37,7 @@ export function ProductsSection({ products }: ProductsSectionProps): JSX.Element
 
     return (
         <>
-            <section id="products" className="mt-12 w-full rounded-none border border-black sm:mt-16 lg:mt-24 xl:mx-auto xl:w-1/2">
+            <section id="products" className="mt-12 w-full scroll-mt-32 rounded-none border border-black sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-1/2">
                 <div className="border-b border-black px-4 py-4 sm:px-6">
                     <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">PRODUCT LINE</h2>
                 </div>

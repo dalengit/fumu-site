@@ -4,7 +4,7 @@ import Image from "next/image";
 const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const navLinks = [
-    { href: "#home", label: "HOME" },
+    { href: "#", label: "HOME", ariaLabel: "Scroll to top" },
     { href: "#about", label: "ABOUT" },
     { href: "#products", label: "PRODUCTS" },
     { href: "#contact", label: "CONTACT" },
@@ -14,7 +14,7 @@ export function SiteHeader(): JSX.Element {
     return (
         <header className="anim-in sticky top-0 z-50 bg-white/80 backdrop-blur-sm">
             <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-4 lg:px-16">
-                <a href="#home" aria-label="Go to FUMU home section" className="flex items-center gap-2 font-sans text-2xl font-black tracking-tighter sm:gap-3 sm:text-3xl">
+                <a href="#" aria-label="Scroll to top" className="flex items-center gap-2 font-sans text-2xl font-black tracking-tighter sm:gap-3 sm:text-3xl">
                     <Image
                         src={`${publicBasePath}/assets/fumu_guy.png`}
                         alt="FUMU chilli oil mascot mark"
@@ -29,7 +29,7 @@ export function SiteHeader(): JSX.Element {
                         <a
                             key={link.href}
                             href={link.href}
-                            aria-label={`Jump to ${link.label.toLowerCase()} section`}
+                            aria-label={"ariaLabel" in link ? link.ariaLabel : `Jump to ${link.label.toLowerCase()} section`}
                             className="motion-lift min-h-11 rounded-none px-2 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-700 transition-colors hover:bg-black hover:text-white sm:min-h-0 sm:px-3 sm:py-1 sm:text-xs sm:tracking-widest"
                         >
                             {link.label}
