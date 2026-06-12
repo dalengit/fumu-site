@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, type JSX } from "react";
+import { useEffect, useRef, type JSX, type TouchEvent } from "react";
 import { createPortal } from "react-dom";
 import type { IngredientCloseupItem } from "../types/content";
 import { GalleryNavButtons } from "./gallery-nav-buttons";
@@ -22,6 +22,46 @@ export function GalleryImageModal({
   onNext,
 }: GalleryImageModalProps): JSX.Element | null {
   const item = selectedIndex === null ? null : items[selectedIndex];
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const onImageTouchStart = (event: TouchEvent<HTMLDivElement>): void => {
+    const touch = event.touches[0];
+    if (!touch) {
+      return;
+    }
+
+    touchStartX.current = touch.clientX;
+    touchStartY.current = touch.clientY;
+  };
+
+  const onImageTouchEnd = (event: TouchEvent<HTMLDivElement>): void => {
+    const startX = touchStartX.current;
+    const startY = touchStartY.current;
+    const touch = event.changedTouches[0];
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+
+    if (startX === null || startY === null || !touch) {
+      return;
+    }
+
+    const deltaX = touch.clientX - startX;
+    const deltaY = touch.clientY - startY;
+    const minSwipeDistance = 40;
+
+    if (Math.abs(deltaX) < minSwipeDistance || Math.abs(deltaX) <= Math.abs(deltaY)) {
+      return;
+    }
+
+    if (deltaX < 0) {
+      onNext();
+      return;
+    }
+
+    onPrevious();
+  };
 
   useEffect(() => {
     if (!item) {
@@ -80,7 +120,7 @@ export function GalleryImageModal({
             <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Gallery</p>
             <h3 className="mt-2 font-sans text-2xl font-black tracking-tighter sm:text-3xl">{item.title}</h3>
           </div>
-          <div className="absolute right-0 top-0 flex flex-col items-end gap-2">
+          <div className="mt-3 flex items-center justify-center gap-2 sm:absolute sm:right-0 sm:top-0 sm:mt-0 sm:flex-col sm:items-end">
             <button
               type="button"
               onClick={onClose}
@@ -99,7 +139,11 @@ export function GalleryImageModal({
         </div>
 
         <div className="mt-5 flex min-h-0 flex-1 flex-col">
-          <div className="flex min-h-0 flex-1 items-center justify-center bg-white">
+          <div
+            className="flex min-h-0 flex-1 items-center justify-center bg-white"
+            onTouchStart={onImageTouchStart}
+            onTouchEnd={onImageTouchEnd}
+          >
             <Image
               src={item.src}
               alt={item.alt}
