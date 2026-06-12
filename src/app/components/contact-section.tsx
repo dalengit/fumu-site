@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { siteConfig } from "../site-config";
 
 export function ContactSection(): JSX.Element {
     return (
@@ -36,8 +37,8 @@ export function ContactSection(): JSX.Element {
                 >
                     <input type="hidden" name="_subject" value="New FUMU contact form submission" />
                     <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_next" value={`${siteConfig.homeUrl}thanks/`} />
                     <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
-                    <input type="hidden" name="_captcha" value="false" />
                     <label className="block">
                         <span className="mb-2 block font-mono text-xs uppercase tracking-widest text-neutral-600">Name</span>
                         <input

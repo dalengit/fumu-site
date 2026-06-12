@@ -4,7 +4,7 @@ import "./globals.css";
 import { HashUrlCleaner } from "./components/hash-url-cleaner";
 import { siteConfig } from "./site-config";
 
-const ogImagePath = `${siteConfig.basePath}/assets/fumu_guy.png`;
+const ogImagePath = `${siteConfig.basePath}/assets/fumu_guy.jpg`;
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",

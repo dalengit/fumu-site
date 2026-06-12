@@ -40,7 +40,7 @@ export default function Page(): JSX.Element {
         description: product.note,
         category: "Asian condiments",
         size: product.size,
-        image: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.png`,
+        image: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.jpg`,
         brand: {
           "@type": "Brand",
           name: "FUMU",
@@ -56,7 +56,7 @@ export default function Page(): JSX.Element {
     url: siteConfig.homeUrl,
     description:
       "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments, product photography, gallery highlights, and product details.",
-    primaryImageOfPage: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.png`,
+    primaryImageOfPage: `${siteConfig.siteOrigin}${siteConfig.basePath}/assets/fumu_guy.jpg`,
     inLanguage: "en-GB",
     about: [
       "FUMU chilli oil",

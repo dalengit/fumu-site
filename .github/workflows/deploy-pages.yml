@@ -31,8 +31,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Set public base path
-        run: echo "NEXT_PUBLIC_BASE_PATH=/${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+      - name: Set deployment URL variables
+        run: |
+          if [ -n "${{ vars.NEXT_PUBLIC_BASE_PATH }}" ]; then
+            echo "NEXT_PUBLIC_BASE_PATH=${{ vars.NEXT_PUBLIC_BASE_PATH }}" >> $GITHUB_ENV
+          else
+            echo "NEXT_PUBLIC_BASE_PATH=/${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+          fi
+
+          if [ -n "${{ vars.NEXT_PUBLIC_SITE_URL }}" ]; then
+            echo "NEXT_PUBLIC_SITE_URL=${{ vars.NEXT_PUBLIC_SITE_URL }}" >> $GITHUB_ENV
+          fi
 
       - name: Build static site
         run: npm run build

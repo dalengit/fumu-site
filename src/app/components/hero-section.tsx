@@ -11,7 +11,7 @@ export function HeroSection(): JSX.Element {
             <div className="relative space-y-4 text-center lg:col-span-12">
                 <div className="mascot-float mx-auto w-full max-w-[200px] sm:max-w-[300px] lg:max-w-[360px]">
                     <Image
-                        src={`${siteConfig.basePath}/assets/fumu_guy.png`}
+                        src={`${siteConfig.basePath}/assets/fumu_guy.jpg`}
                         alt="FUMU chilli oil mascot logo"
                         width={480}
                         height={480}

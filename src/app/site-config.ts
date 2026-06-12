@@ -10,7 +10,17 @@ const inferredSiteOrigin =
     ? `https://${repositoryOwner}.github.io`
     : "https://fumu.co";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? inferredBasePath;
+const normalizeBasePath = (path: string): string => {
+  const trimmed = path.trim();
+  if (!trimmed || trimmed === "/") {
+    return "";
+  }
+
+  const withLeadingSlash = trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+  return withLeadingSlash.replace(/\/+$/, "");
+};
+
+const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? inferredBasePath);
 const siteOrigin =
   (process.env.NEXT_PUBLIC_SITE_URL ?? inferredSiteOrigin).replace(/\/$/, "");
 const canonicalPath = basePath ? `${basePath}/` : "/";
