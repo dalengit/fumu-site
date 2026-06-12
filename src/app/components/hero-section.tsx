@@ -19,7 +19,7 @@ export function HeroSection(): JSX.Element {
                         className="h-auto w-full object-contain"
                     />
                 </div>
-                <h1 className="anim-up delay-3 mx-auto w-full font-sans text-[clamp(3.7rem,24vw,12.4rem)] font-black leading-none tracking-tighter sm:w-3/4">FUMU</h1>
+                <h1 className="anim-up delay-3 mx-auto w-full font-sans text-[clamp(4.2rem,26vw,13.8rem)] font-black leading-none tracking-tighter sm:w-3/4">FUMU</h1>
                 <p className="anim-up delay-4 mx-auto max-w-md text-sm sm:text-base">FUMU chilli oil, handmade in Manchester. Small-batch Asian condiments for bold everyday cooking.</p>
                 <div className="anim-up delay-4 mx-auto flex w-full max-w-[280px] flex-col justify-center gap-3 sm:max-w-none sm:flex-row">
                     <a

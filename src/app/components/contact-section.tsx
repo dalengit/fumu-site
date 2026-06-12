@@ -4,7 +4,7 @@ export function ContactSection(): JSX.Element {
     return (
         <section id="contact" className="mt-12 w-full rounded-none border border-black sm:mt-16 lg:mt-24 xl:mx-auto xl:w-[calc(50%+200px)]">
             <div className="border-b border-black px-4 py-4 sm:px-6">
-                <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">CONTACT</h2>
+                <h2 className="font-sans text-2xl font-black tracking-tighter sm:text-5xl">CONTACT</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12">
                 <div className="border-b border-black px-4 py-5 sm:px-6 sm:py-6 md:col-span-4 md:border-b-0 md:border-r">

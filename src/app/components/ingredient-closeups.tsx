@@ -45,7 +45,7 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
         <div className="border-b border-black px-4 py-4 sm:px-6">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <h2 id="gallery-heading" className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">GALLERY</h2>
+              <h2 id="gallery-heading" className="font-sans text-2xl font-black tracking-tighter sm:text-5xl">GALLERY</h2>
               <p className="mt-3 text-sm text-neutral-700">Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.</p>
             </div>
             <GalleryNavButtons
