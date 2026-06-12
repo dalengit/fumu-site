@@ -40,18 +40,14 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
       <section
         id="gallery"
         aria-labelledby="gallery-heading"
-        className="mt-12 w-full scroll-mt-32 border border-black sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-[calc(50%+200px)]"
+        className="mt-12 w-full scroll-mt-32 border border-black sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-[calc(50%+260px)]"
       >
         <div className="border-b border-black px-4 py-4 sm:px-6">
-          <h2 id="gallery-heading" className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">GALLERY</h2>
-          <p className="mt-3 text-sm text-neutral-700">Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.</p>
-        </div>
-
-        <div className="space-y-3 px-4 py-5 sm:px-6 sm:py-6">
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
-              Scroll horizontally with touchpad or swipe. Tap an image to expand.
-            </p>
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h2 id="gallery-heading" className="font-sans text-2xl font-black tracking-tighter sm:text-3xl">GALLERY</h2>
+              <p className="mt-3 text-sm text-neutral-700">Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.</p>
+            </div>
             <GalleryNavButtons
               onPrevious={() => scrollGalleryBy("previous")}
               onNext={() => scrollGalleryBy("next")}
@@ -60,6 +56,9 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
               className="flex items-center gap-2"
             />
           </div>
+        </div>
+
+        <div className="px-4 py-5 sm:px-6 sm:py-6">
           <div ref={carouselRef} onScroll={recenterLoopIfNeeded} className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
             {loopedItems.map((entry) => (
               <figure key={entry.key} className="w-[300px] shrink-0 snap-start sm:w-[360px] lg:w-[420px]">

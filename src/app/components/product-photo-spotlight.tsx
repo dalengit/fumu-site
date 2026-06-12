@@ -11,9 +11,9 @@ export function ProductPhotoSpotlight({ content }: ProductPhotoSpotlightProps): 
     <section
       id="photo-spotlight"
       aria-labelledby="photo-spotlight-heading"
-      className="mt-12 w-full scroll-mt-32 sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-[calc(50%+260px)]"
+      className="mt-12 w-full scroll-mt-32 rounded-none border border-black sm:mt-16 sm:scroll-mt-24 lg:mt-24 xl:mx-auto xl:w-[calc(50%+260px)]"
     >
-      <div className="px-4 py-4 sm:px-6">
+      <div className="border-b border-black px-4 py-4 sm:px-6">
         <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">{content.eyebrow}</p>
         <h2 id="photo-spotlight-heading" className="mt-2 font-sans text-2xl font-black tracking-tighter sm:text-3xl">{content.title}</h2>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-700">{content.description}</p>
