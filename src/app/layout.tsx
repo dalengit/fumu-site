@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Kanit, Space_Mono } from "next/font/google";
 import "./globals.css";
+import { HashUrlCleaner } from "./components/hash-url-cleaner";
 import { siteConfig } from "./site-config";
 
 const ogImagePath = `${siteConfig.basePath}/assets/fumu_guy.png`;
@@ -107,6 +108,7 @@ export default function RootLayout({
       className={`${kanit.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <HashUrlCleaner />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
