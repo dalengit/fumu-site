@@ -1,8 +1,5 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
-
 const normalizeBasePath = (path: string): string => {
   const trimmed = path.trim();
   if (!trimmed || trimmed === "/") {
@@ -13,8 +10,7 @@ const normalizeBasePath = (path: string): string => {
   return withLeadingSlash.replace(/\/+$/, "");
 };
 
-const inferredBasePath = isGithubActions && repositoryName ? `/${repositoryName}` : "";
-const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? process.env.NEXT_BASE_PATH ?? inferredBasePath;
+const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? process.env.NEXT_BASE_PATH ?? "";
 const basePath = normalizeBasePath(configuredBasePath);
 
 const nextConfig: NextConfig = {

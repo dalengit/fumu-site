@@ -1,14 +1,4 @@
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const [repositoryOwner = "", repositoryName = ""] =
-  process.env.GITHUB_REPOSITORY?.split("/") ?? [];
-
-const inferredBasePath =
-  isGithubActions && repositoryName ? `/${repositoryName}` : "";
-
-const inferredSiteOrigin =
-  isGithubActions && repositoryOwner
-    ? `https://${repositoryOwner}.github.io`
-    : "https://fumu.co";
+const inferredSiteOrigin = "https://fumu.world";
 
 const normalizeBasePath = (path: string): string => {
   const trimmed = path.trim();
@@ -20,7 +10,7 @@ const normalizeBasePath = (path: string): string => {
   return withLeadingSlash.replace(/\/+$/, "");
 };
 
-const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? inferredBasePath);
+const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 const siteOrigin =
   (process.env.NEXT_PUBLIC_SITE_URL ?? inferredSiteOrigin).replace(/\/$/, "");
 const canonicalPath = basePath ? `${basePath}/` : "/";
