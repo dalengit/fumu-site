@@ -18,7 +18,7 @@ export function ProductPhotoSpotlight({ content }: ProductPhotoSpotlightProps): 
       <div className="border-b border-black px-4 py-4 sm:px-6">
         <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">{content.eyebrow}</p>
         <h2 id="photo-spotlight-heading" className="mt-2 font-sans text-xl font-black tracking-tighter sm:text-4xl">{content.title}</h2>
-        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-700">{content.description}</p>
+        <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-neutral-700">{content.description}</p>
         <p className="mt-2 text-sm leading-relaxed text-neutral-700">
           {content.supportingText}{" "}
           <a href={content.supportingLinkHref} className="underline decoration-black/40 underline-offset-2 hover:decoration-black">{content.supportingLinkLabel}</a>{" "}

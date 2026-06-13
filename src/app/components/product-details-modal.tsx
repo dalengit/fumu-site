@@ -66,7 +66,7 @@ export function ProductDetailsModal({ product, onClose }: ProductDetailsModalPro
 
                 <div className="mt-6 space-y-4 text-sm">
                     <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
-                        Heat {product.heat} | {product.size} | {product.status}
+                        Heat {product.heat} | {product.size}
                     </p>
                     <p>{product.note}</p>
                     <p className="leading-relaxed text-neutral-700">
