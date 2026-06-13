@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 import Image from "next/image";
+import { heroContent } from "../data/site-content";
 import { siteConfig } from "../site-config";
 
 export function HeroSection(): JSX.Element {
@@ -12,22 +13,22 @@ export function HeroSection(): JSX.Element {
                 <div className="mascot-float mx-auto w-full max-w-[200px] sm:max-w-[300px] lg:max-w-[360px]">
                     <Image
                         src={`${siteConfig.basePath}/assets/fumu_guy.jpg`}
-                        alt="FUMU chilli oil mascot logo"
+                        alt={heroContent.mascotAlt}
                         width={480}
                         height={480}
                         priority
                         className="h-auto w-full object-contain"
                     />
                 </div>
-                <h1 className="anim-up delay-3 mx-auto w-full font-sans text-[clamp(3.4rem,20vw,10.5rem)] font-black leading-none tracking-tighter sm:w-3/4">FUMU</h1>
-                <p className="anim-up delay-4 mx-auto max-w-md text-sm sm:text-base">FUMU chilli oil, handmade in Manchester. Small-batch Asian condiments for bold everyday cooking.</p>
+                <h1 className="anim-up delay-3 mx-auto w-full font-sans text-[clamp(3.4rem,20vw,10.5rem)] font-black leading-none tracking-tighter sm:w-3/4">{heroContent.title}</h1>
+                <p className="anim-up delay-4 mx-auto max-w-md text-sm sm:text-base">{heroContent.description}</p>
                 <div className="anim-up delay-4 mx-auto flex w-full max-w-[280px] flex-col justify-center gap-3 sm:max-w-none sm:flex-row">
                     <a
-                        href="#photo-spotlight"
-                        aria-label="Jump to product spotlight section"
+                        href={heroContent.ctaHref}
+                        aria-label={heroContent.ctaAriaLabel}
                         className="motion-lift w-full rounded-none bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:bg-black sm:w-auto"
                     >
-                        Explore the drop
+                        {heroContent.ctaLabel}
                     </a>
                 </div>
             </div>

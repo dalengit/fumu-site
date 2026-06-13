@@ -1,31 +1,117 @@
 import type {
+  AboutSectionContent,
+  ContactSectionContent,
+  FooterContent,
+  GallerySectionContent,
+  HeroContent,
   IngredientCloseupItem,
+  ProductsSectionContent,
   ProductPhotoSpotlightContent,
+  SiteHeaderNavLink,
 } from "../types/content";
 import { siteConfig } from "../site-config";
 
 const assetPath = (path: string): string => `${siteConfig.basePath}${path}`;
 
 const mascotImage = {
-  src: assetPath("/assets/fumu_guy.jpg"),
-  alt: "FUMU chilli oil jar visual for small-batch launch",
-  width: 1200,
-  height: 1200,
+  src: assetPath("/assets/prod_edites.png"),
+  alt: "FUMU product lineup image featuring available products",
+  width: 1456,
+  height: 732,
 } as const;
 
 export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
-  eyebrow: "Product spotlight",
-  title: "Handmade chilli oil Manchester, bottled in small batches",
+  eyebrow: "Lineup",
+  title: "The Full FUMU Range",
   description:
-    "FUMU chilli oil hero photography showcases the jar, texture, and brand identity for better product discovery and stronger click-through.",
+    "From everyday flavour boosters to serious heat, the FUMU range is built for noodles, rice, eggs, and everything in between. Small-batch made in Manchester with layered chilli depth, aromatic lift, and a clean finish.",
+  supportingText:
+    "Crafted in Bolton, near Manchester. Explore the",
+  supportingLinkLabel: "FUMU product line",
+  supportingLinkHref: "#products",
+  supportingSuffix: "for current heat levels and drop status.",
   primaryImage: {
     ...mascotImage,
-    caption: "Primary jar hero shot",
+    caption: "The current FUMU lineup: small-batch jars crafted for flavour-first cooking.",
   },
-  secondaryImage: {
-    ...mascotImage,
-    caption: "Secondary angle detail",
+};
+
+export const heroContent: HeroContent = {
+  title: "FUMU",
+  description:
+    "FUMU chilli oil, handmade in Manchester. Small-batch Asian condiments for bold everyday cooking.",
+  ctaLabel: "Explore the drop",
+  ctaHref: "#photo-spotlight",
+  ctaAriaLabel: "Jump to product spotlight section",
+  mascotAlt: "FUMU chilli oil mascot logo",
+};
+
+export const headerNavLinks: ReadonlyArray<SiteHeaderNavLink> = [
+  { href: "#", label: "HOME", ariaLabel: "Scroll to top" },
+  { href: "#photo-spotlight", label: "PRODUCTS", ariaLabel: "Jump to product spotlight section" },
+  { href: "#about", label: "ABOUT" },
+  { href: "#gallery", label: "GALLERY" },
+  { href: "#contact", label: "CONTACT" },
+];
+
+export const aboutSectionContent: AboutSectionContent = {
+  heading: "ABOUT",
+  whatWeMakeLabel: "What we make",
+  whatWeMakeText:
+    "From FUMU chilli oil to fermented staples, these small-batch chilli oil UK drops are handmade in Manchester for noodles, rice, eggs, stir-fries, and snacks.",
+  approachLabel: "Our approach",
+  approachText:
+    "FUMU started as a tiny kitchen experiment and grew into artisan chilli oil Manchester cooks reach for: clean heat, layered umami, and ingredients that hold up in real home cooking.",
+  highlights: [
+    {
+      title: "Small-batch production",
+      text: "Built for bold flavour-first cooking, every batch is tuned for depth, texture, and everyday use.",
+    },
+    {
+      title: "Real ingredients",
+      text: "Built for bold flavour-first cooking, every batch is tuned for depth, texture, and everyday use.",
+    },
+    {
+      title: "Hand bottled",
+      text: "Built for bold flavour-first cooking, every batch is tuned for depth, texture, and everyday use.",
+    },
+  ],
+};
+
+export const productsSectionContent: ProductsSectionContent = {
+  heading: "PRODUCT LINE",
+  findOutMoreLabel: "Find out more",
+};
+
+export const gallerySectionContent: GallerySectionContent = {
+  heading: "GALLERY",
+  description: "Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.",
+  previousLabel: "Scroll gallery left",
+  nextLabel: "Scroll gallery right",
+};
+
+export const contactSectionContent: ContactSectionContent = {
+  heading: "CONTACT",
+  locationText: "FUMU Manchester, UK",
+  emailLabel: "Email Us!",
+  emailAddress: "fuchankee@gmail.com",
+  instagramLabel: "Instagram",
+  instagramUrl: "https://www.instagram.com/fumu.chilli/",
+  formSubject: "New FUMU contact form submission",
+  submitLabel: "Send",
+  fields: {
+    nameLabel: "Name",
+    namePlaceholder: "Your name",
+    emailLabel: "Email",
+    emailPlaceholder: "you@domain.com",
+    messageLabel: "Message",
+    messagePlaceholder: "Wholesale, collabs, press",
   },
+};
+
+export const footerContent: FooterContent = {
+  batchText: "Batch_004 | next drop 2026-06-21 09:00 UTC",
+  homeLabel: "Home",
 };
 
 export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, type JSX } from "react";
+import { gallerySectionContent } from "../data/site-content";
 import type { IngredientCloseupItem } from "../types/content";
 import { GalleryImageModal } from "./gallery-image-modal";
 import { GalleryNavButtons } from "./gallery-nav-buttons";
@@ -45,14 +46,14 @@ export function IngredientCloseups({ items }: IngredientCloseupsProps): JSX.Elem
         <div className="border-b border-black px-4 py-4 sm:px-6">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <h2 id="gallery-heading" className="font-sans text-xl font-black tracking-tighter sm:text-4xl">GALLERY</h2>
-              <p className="mt-3 text-sm text-neutral-700">Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.</p>
+              <h2 id="gallery-heading" className="font-sans text-xl font-black tracking-tighter sm:text-4xl">{gallerySectionContent.heading}</h2>
+              <p className="mt-3 text-sm text-neutral-700">{gallerySectionContent.description}</p>
             </div>
             <GalleryNavButtons
               onPrevious={() => scrollGalleryBy("previous")}
               onNext={() => scrollGalleryBy("next")}
-              previousLabel="Scroll gallery left"
-              nextLabel="Scroll gallery right"
+              previousLabel={gallerySectionContent.previousLabel}
+              nextLabel={gallerySectionContent.nextLabel}
               className="flex items-center gap-2"
             />
           </div>

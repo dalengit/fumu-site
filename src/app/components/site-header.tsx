@@ -2,15 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState, type JSX } from "react";
+import { headerNavLinks } from "../data/site-content";
 import { siteConfig } from "../site-config";
-
-const navLinks = [
-    { href: "#", label: "HOME", ariaLabel: "Scroll to top" },
-    { href: "#photo-spotlight", label: "PRODUCTS", ariaLabel: "Jump to product spotlight section" },
-    { href: "#about", label: "ABOUT" },
-    { href: "#gallery", label: "GALLERY" },
-    { href: "#contact", label: "CONTACT" },
-] as const;
 
 const sectionIds = ["home", "photo-spotlight", "about", "gallery", "contact"] as const;
 
@@ -76,7 +69,7 @@ export function SiteHeader(): JSX.Element {
                     FUMU
                 </a>
                 <nav aria-label="Primary" className="flex w-full flex-wrap items-center justify-center gap-1 sm:w-auto sm:justify-end sm:gap-2">
-                    {navLinks.map((link) => {
+                    {headerNavLinks.map((link) => {
                         const isActive = activeHref === link.href;
 
                         return (

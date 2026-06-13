@@ -7,6 +7,8 @@ interface ProductPhotoSpotlightProps {
 }
 
 export function ProductPhotoSpotlight({ content }: ProductPhotoSpotlightProps): JSX.Element {
+  const hasSecondaryImage = Boolean(content.secondaryImage);
+
   return (
     <section
       id="photo-spotlight"
@@ -18,19 +20,24 @@ export function ProductPhotoSpotlight({ content }: ProductPhotoSpotlightProps): 
         <h2 id="photo-spotlight-heading" className="mt-2 font-sans text-xl font-black tracking-tighter sm:text-4xl">{content.title}</h2>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-700">{content.description}</p>
         <p className="mt-2 text-sm leading-relaxed text-neutral-700">
-          Crafted in Bolton, near Manchester. Explore the <a href="#products" className="underline decoration-black/40 underline-offset-2 hover:decoration-black">FUMU product line</a> for current heat levels and drop status.
+          {content.supportingText}{" "}
+          <a href={content.supportingLinkHref} className="underline decoration-black/40 underline-offset-2 hover:decoration-black">{content.supportingLinkLabel}</a>{" "}
+          {content.supportingSuffix}
         </p>
       </div>
 
       <div className="grid grid-cols-1 items-stretch gap-3 px-4 py-4 sm:px-6 sm:py-5 lg:grid-cols-12">
-        <figure className="flex h-full flex-col lg:col-span-8">
-          <div className="aspect-square w-full flex-1 overflow-hidden border border-black bg-neutral-100 lg:aspect-auto">
+        <figure className={`flex h-full flex-col ${hasSecondaryImage ? "lg:col-span-8" : "lg:col-span-12"}`}>
+          <div
+            className="w-full overflow-hidden border border-black bg-neutral-100"
+            style={{ aspectRatio: `${content.primaryImage.width} / ${content.primaryImage.height}` }}
+          >
             <Image
               src={content.primaryImage.src}
               alt={content.primaryImage.alt}
               width={content.primaryImage.width}
               height={content.primaryImage.height}
-              sizes="(max-width: 1024px) 100vw, 66vw"
+              sizes={hasSecondaryImage ? "(max-width: 1024px) 100vw, 66vw" : "(max-width: 1024px) 100vw, 100vw"}
               className="h-full w-full object-cover"
             />
           </div>
@@ -43,7 +50,10 @@ export function ProductPhotoSpotlight({ content }: ProductPhotoSpotlightProps): 
 
         {content.secondaryImage ? (
           <figure className="flex h-full flex-col lg:col-span-4">
-            <div className="aspect-square w-full flex-1 overflow-hidden border border-black bg-neutral-100 lg:aspect-auto">
+            <div
+              className="w-full overflow-hidden border border-black bg-neutral-100"
+              style={{ aspectRatio: `${content.secondaryImage.width} / ${content.secondaryImage.height}` }}
+            >
               <Image
                 src={content.secondaryImage.src}
                 alt={content.secondaryImage.alt}
