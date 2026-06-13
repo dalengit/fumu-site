@@ -25,9 +25,9 @@ export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
   title: "Meet The Full FUMU Range",
   description:
     "From all-day flavour builders to serious face-tingle heat, the FUMU range is built for noodles, rice, eggs, and rogue fridge meals." +
-    "\nSmall-batch in Manchester with layered chilli depth, aromatic lift, and a clean finish that keeps you coming back.",
+    "\nSmall-batch in Bolton with layered chilli depth, aromatic lift, and a clean finish that keeps you coming back.",
   supportingText:
-    "Mixed in Manchester. Explore the",
+    "Mixed in Bolton. Explore the",
   supportingLinkLabel: "full FUMU loadout",
   supportingLinkHref: "#products",
   supportingSuffix: "and pick your heat level.",
@@ -40,7 +40,7 @@ export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
 export const heroContent: HeroContent = {
   title: "FUMU",
   description:
-    "Handmade in Manchester. Bold chilli oils and ferments built to wake up everyday food.",
+    "Handmade in Bolton. Bold chilli oils and ferments built to wake up everyday food.",
   ctaLabel: "See the drop",
   ctaHref: "#photo-spotlight",
   ctaAriaLabel: "Jump to the FUMU product drop",

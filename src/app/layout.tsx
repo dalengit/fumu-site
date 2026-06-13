@@ -14,8 +14,8 @@ const localBusinessJsonLd = {
   image: `${siteConfig.siteOrigin}${ogImagePath}`,
   url: siteConfig.homeUrl,
   description:
-    "FUMU is handmade in Manchester: bold chilli oils and ferments built to wake up everyday food.",
-  areaServed: ["Manchester", "United Kingdom"],
+    "FUMU is handmade in Bolton: bold chilli oils and ferments built to wake up everyday food.",
+  areaServed: ["Bolton", "Manchester", "United Kingdom"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Manchester",
@@ -46,11 +46,11 @@ export const metadata: Metadata = {
     "Handmade in Manchester. FUMU chilli oils and ferments bring layered heat, crunch, and serious flavour to everyday meals.",
   keywords: [
     "FUMU chilli oil",
-    "handmade chilli oil Manchester",
+    "handmade chilli oil Manchester, Bolton",
     "small-batch chilli oil UK",
-    "artisan chilli oil Manchester",
-    "Asian condiments Manchester",
-    "FUMU Manchester",
+    "artisan chilli oil Manchester, Bolton",
+    "Asian condiments Manchester, Bolton",
+    "FUMU Manchester, Bolton",
   ],
   alternates: {
     canonical: siteConfig.canonicalPath,
