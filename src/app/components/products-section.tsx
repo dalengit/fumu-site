@@ -43,7 +43,7 @@ function ProductCard({ product, onFindOutMore }: { product: Product; onFindOutMo
                 <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
                     Heat {product.heat} | {product.size}
                 </p>
-                <p className="text-sm">{product.note}</p>
+                <p className="whitespace-pre-line text-sm">{product.note}</p>
                 <div className="pt-1">
                     <button
                         type="button"

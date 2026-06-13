@@ -34,7 +34,7 @@ export function ContactSection(): JSX.Element {
             setSubmissionState("success");
         } catch {
             setSubmissionState("error");
-            setSubmissionError("We could not send your message right now. Please try again.");
+            setSubmissionError("Message did not send. Try again in a sec.");
         }
     };
 
@@ -110,7 +110,7 @@ export function ContactSection(): JSX.Element {
                             disabled={submissionState === "sending"}
                             className="motion-lift min-h-11 w-full rounded-none border border-red-700 bg-red-700 px-4 py-2 font-sans font-black tracking-tighter text-white transition-colors hover:border-black hover:bg-black disabled:cursor-not-allowed disabled:opacity-70 md:w-auto"
                         >
-                            {submissionState === "sending" ? "Sending..." : contactSectionContent.submitLabel}
+                            {submissionState === "sending" ? "Sending heat..." : contactSectionContent.submitLabel}
                         </button>
                         {submissionState === "error" ? (
                             <p className="text-sm text-red-700" role="status">{submissionError}</p>
@@ -124,17 +124,17 @@ export function ContactSection(): JSX.Element {
                     className="modal-backdrop fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4"
                     role="dialog"
                     aria-modal="true"
-                    aria-label="Message sent"
+                    aria-label="Message delivered"
                     onClick={() => setSubmissionState("idle")}
                 >
                     <div
                         className="modal-panel w-full max-w-xl rounded-none border border-black bg-white p-6 text-black shadow-2xl"
                         onClick={(event) => event.stopPropagation()}
                     >
-                        <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Message sent</p>
-                        <h3 className="mt-2 font-sans text-2xl font-black tracking-tighter sm:text-3xl">Thanks for reaching out.</h3>
+                        <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">Message delivered</p>
+                        <h3 className="mt-2 font-sans text-2xl font-black tracking-tighter sm:text-3xl">You are in. We got it.</h3>
                         <p className="mt-3 text-sm leading-relaxed text-neutral-700">
-                            We have received your message and will get back to you soon.
+                            Your message landed. We will get back to you soon.
                         </p>
                         <div className="mt-5 flex flex-wrap gap-2">
                             <button
@@ -149,7 +149,7 @@ export function ContactSection(): JSX.Element {
                                 aria-label="Return to homepage"
                                 className="motion-lift inline-flex min-h-11 items-center rounded-none border border-black px-4 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
                             >
-                                Back to home
+                                Back to top
                             </a>
                         </div>
                     </div>

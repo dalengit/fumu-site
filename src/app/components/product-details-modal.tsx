@@ -68,7 +68,7 @@ export function ProductDetailsModal({ product, onClose }: ProductDetailsModalPro
                     <p className="font-mono text-xs uppercase tracking-widest text-neutral-600">
                         Heat {product.heat} | {product.size}
                     </p>
-                    <p>{product.note}</p>
+                    <p className="whitespace-pre-line">{product.note}</p>
                     <p className="leading-relaxed text-neutral-700">
                         <span className="font-mono uppercase tracking-widest text-neutral-600">Ingredients:</span>{" "}
                         {product.ingredients}

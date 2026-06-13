@@ -14,7 +14,7 @@ const localBusinessJsonLd = {
   image: `${siteConfig.siteOrigin}${ogImagePath}`,
   url: siteConfig.homeUrl,
   description:
-    "FUMU chilli oil is handmade in Manchester, UK. Small-batch Asian condiments built for bold flavour and everyday cooking.",
+    "FUMU is handmade in Manchester: bold chilli oils and ferments built to wake up everyday food.",
   areaServed: ["Manchester", "United Kingdom"],
   address: {
     "@type": "PostalAddress",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     template: "%s | FUMU",
   },
   description:
-    "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments built for bold flavour, layered umami, and everyday cooking.",
+    "Handmade in Manchester. FUMU chilli oils and ferments bring layered heat, crunch, and serious flavour to everyday meals.",
   keywords: [
     "FUMU chilli oil",
     "handmade chilli oil Manchester",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "FUMU",
     title: "FUMU Manchester | Small-batch Chilli Oil UK",
     description:
-      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments built for bold flavour, layered umami, and everyday cooking.",
+      "Handmade in Manchester. FUMU chilli oils and ferments bring layered heat, crunch, and serious flavour to everyday meals.",
     images: [
       {
         url: ogImagePath,
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FUMU Manchester | Small-batch Chilli Oil UK",
     description:
-      "FUMU chilli oil is handmade in Manchester, UK. Discover small-batch Asian condiments built for bold flavour and everyday cooking.",
+      "Handmade in Manchester. FUMU brings layered heat, crunch, and big flavour to everyday food.",
     images: [ogImagePath],
   },
   robots: {

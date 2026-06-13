@@ -21,29 +21,29 @@ const mascotImage = {
 } as const;
 
 export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
-  eyebrow: "Lineup",
-  title: "The Full FUMU Range",
+  eyebrow: "Loadout",
+  title: "Meet The Full FUMU Range",
   description:
-    "From everyday flavour boosters to serious heat, the FUMU range is built for noodles, rice, eggs, and everything in between (PIZZA!)." +
-    "\nSmall-batch made in Manchester with layered chilli depth, aromatic lift, and a clean finish.",
+    "From all-day flavour builders to serious face-tingle heat, the FUMU range is built for noodles, rice, eggs, and rogue fridge meals." +
+    "\nSmall-batch in Manchester with layered chilli depth, aromatic lift, and a clean finish that keeps you coming back.",
   supportingText:
-    "Crafted in Bolton. Explore the",
-  supportingLinkLabel: "FUMU product line",
+    "Mixed in Manchester. Explore the",
+  supportingLinkLabel: "full FUMU loadout",
   supportingLinkHref: "#products",
-  supportingSuffix: "for current heat levels.",
+  supportingSuffix: "and pick your heat level.",
   primaryImage: {
     ...mascotImage,
-    caption: "The current FUMU lineup: SuperHot Chilli Oil, Original Chilli Oil, and FUMU Kimchi.",
+    caption: "Current drop: SuperHot Chilli Oil, Original Chilli Oil, and FUMU Kimchi.",
   },
 };
 
 export const heroContent: HeroContent = {
   title: "FUMU",
   description:
-    "FUMU chilli oil, handmade in Manchester. Small-batch Asian condiments for bold everyday cooking.",
-  ctaLabel: "Explore the drop",
+    "Handmade in Manchester. Bold chilli oils and ferments built to wake up everyday food.",
+  ctaLabel: "See the drop",
   ctaHref: "#photo-spotlight",
-  ctaAriaLabel: "Jump to product spotlight section",
+  ctaAriaLabel: "Jump to the FUMU product drop",
   mascotAlt: "FUMU chilli oil mascot logo",
 };
 
@@ -59,60 +59,60 @@ export const aboutSectionContent: AboutSectionContent = {
   heading: "ABOUT",
   whatWeMakeLabel: "What we make",
   whatWeMakeText:
-    "From FUMU chilli oil to fermented staples, these small-batch chilli oil UK drops are handmade in Manchester for noodles, rice, eggs, stir-fries, and snacks.",
-  approachLabel: "Our approach",
+    "From chilli oil to fermented staples, every FUMU drop is made in Manchester for noodles, eggs, pizza, beans on toast at 1am, and whatever else is about to enter your mouth.",
+  approachLabel: "How we move",
   approachText:
-    "FUMU started as a tiny kitchen experiment and grew into artisan chilli oil Manchester cooks reach for: clean heat, layered umami, and ingredients that hold up in real home cooking.",
+    "FUMU started as a tiny kitchen experiment and turned into a flavour system people actually use: clean heat, layered umami, and ingredients that hold up in real home cooking.",
   highlights: [
     {
-      title: "Small-batch production",
-      text: "Built for bold flavour-first cooking, every batch is tuned for depth, texture, and everyday use.",
+      title: "No weak batches",
+      text: "We run small on purpose so every jar hits hard: loud aroma, deep umami, and heat that does not fade halfway through the meal.",
     },
     {
-      title: "Real ingredients",
-      text: "Built for bold flavour-first cooking, every batch is tuned for depth, texture, and everyday use.",
+      title: "Real stuff only",
+      text: "Proper chillies, garlic, aromatics, and good oil. No filler energy, no fake hype, just layered flavour that earns its spot on the table.",
     },
     {
-      title: "Hand bottled",
-      text: "Built for bold flavour-first cooking, every batch is tuned for depth, texture, and everyday use.",
+      title: "Built for chaos meals",
+      text: "Midnight noodles, pre-work eggs, leftover rice straight from the pan. FUMU drags chaotic meals out of the gutter and turns them into full flavour events.",
     },
   ],
 };
 
 export const productsSectionContent: ProductsSectionContent = {
-  heading: "PRODUCT LINE",
-  findOutMoreLabel: "Find out more",
+  heading: "THE DROP",
+  findOutMoreLabel: "See details",
 };
 
 export const gallerySectionContent: GallerySectionContent = {
   heading: "GALLERY",
-  description: "Browse visuals that spotlight FUMU chilli oil texture, ingredients, and flavour profile.",
-  previousLabel: "Scroll gallery left",
-  nextLabel: "Scroll gallery right",
+  description: "A closer look at the texture, crunch, heat, and kitchen chaos behind every FUMU batch.",
+  previousLabel: "Slide gallery left",
+  nextLabel: "Slide gallery right",
 };
 
 export const contactSectionContent: ContactSectionContent = {
   heading: "CONTACT",
-  locationText: "FUMU Manchester, UK",
-  emailLabel: "Email Us!",
+  locationText: "Manchester, UK",
+  emailLabel: "Hit us on email",
   emailAddress: "fuchankee@gmail.com",
   instagramLabel: "Instagram",
   instagramUrl: "https://www.instagram.com/fumu.chilli/",
-  formSubject: "New FUMU contact form submission",
-  submitLabel: "Send",
+  formSubject: "New message from fumu-site",
+  submitLabel: "Send it",
   fields: {
     nameLabel: "Name",
-    namePlaceholder: "Your name",
+    namePlaceholder: "What should we call you?",
     emailLabel: "Email",
-    emailPlaceholder: "you@domain.com",
+    emailPlaceholder: "fumuEater420@chilli.com",
     messageLabel: "Message",
-    messagePlaceholder: "Wholesale, collabs, press",
+    messagePlaceholder: "Wholesale, collabs, stockists, press...",
   },
 };
 
 export const footerContent: FooterContent = {
-  batchText: "Batch_004 | next drop 2026-06-21 09:00 UTC",
-  homeLabel: "Home",
+  batchText: "Batch_004 | next drop 2026-06-21 09:00 UTC | stay ready",
+  homeLabel: "Back to top",
 };
 
 export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
@@ -122,7 +122,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "CHILLIS",
-    note: "3 Different types of chillies are blended for heat, depth, and aroma.",
+    note: "Three chilli types, one mission: depth, aroma, and heat that actually tastes like something.",
   },
   {
     src: assetPath("/assets/garlic.jpg"),
@@ -130,7 +130,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "GARLIC",
-    note: "Mmmmmm, garlic. Our garlic is fried to a golden crisp for aroma and texture.",
+    note: "Golden-fried garlic for crunch, aroma, and that extra hit your noodles were missing.",
   },
   {
     src: assetPath("/assets/flame_pan.jpg"),
@@ -138,7 +138,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "FIRE",
-    note: "Slow infusion adds complexity to every spoon.",
+    note: "Controlled heat. Slow infusion. Big flavour in every spoon.",
   },
   {
     src: assetPath("/assets/round_wok_chilli.jpg"),
@@ -146,7 +146,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "ROASTED HEAT",
-    note: "Roasted chillis are carefully balanced for flavour, not just burn.",
+    note: "Roasted chillies for smoky depth and bite, never pointless burn.",
   },
   {
     src: assetPath("/assets/fried_garlic.jpg"),
@@ -154,7 +154,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "CRUNCHY GARLIC",
-    note: "Crunchy garlic adds texture and bite to every mouthful.",
+    note: "Crunch factor locked in. Every bite gets texture and attitude.",
   },
   {
     src: assetPath("/assets/landscape_kitchen.jpg"),
@@ -162,7 +162,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "KITCHEN",
-    note: "Small-batch production in the kitchen keeps flavour, consistency, and quality on point.",
+    note: "Small-batch kitchen runs keep every jar loud, consistent, and clean.",
   },
   {
     src: assetPath("/assets/spron.jpg"),
@@ -170,7 +170,7 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "AROMATICS",
-    note: "Aromatic ingredients bring lift, fragrance, and balance to the final blend.",
+    note: "Aromatics bring lift and balance so the heat lands right.",
   },
   {
     src: assetPath("/assets/round_oil.jpg"),
@@ -178,6 +178,6 @@ export const ingredientCloseupItems: ReadonlyArray<IngredientCloseupItem> = [
     width: 900,
     height: 900,
     title: "CHILLI OIL",
-    note: "FUMU: drizzle once, crave forever.",
+    note: "One drizzle and plain food is finished.",
   },
 ];
