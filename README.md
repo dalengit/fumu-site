@@ -34,3 +34,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Repository Organization
+
+- Planning docs: [docs/planning/SEO_IMPLEMENTATION_TRACKER.md](docs/planning/SEO_IMPLEMENTATION_TRACKER.md), [docs/planning/WEBSITE_EXPANSION_DEVELOPMENT_PLAN.md](docs/planning/WEBSITE_EXPANSION_DEVELOPMENT_PLAN.md)
+- Reference docs: [docs/reference/PRODUCT_INGREDIENTS_AND_ALLERGENS.md](docs/reference/PRODUCT_INGREDIENTS_AND_ALLERGENS.md)
+- Templates/data files: [data/templates/2022.xlsx](data/templates/2022.xlsx)
+- Generated menu PDF: [public/assets/fumu-price-list.pdf](public/assets/fumu-price-list.pdf)
