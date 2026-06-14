@@ -68,7 +68,7 @@ export function SiteHeader(): JSX.Element {
                     />
                     FUMU
                 </a>
-                <nav aria-label="Primary" className="flex w-full flex-wrap items-center justify-center gap-1 sm:w-auto sm:justify-end sm:gap-2">
+                <nav aria-label="Primary" className="hide-scrollbar flex w-full flex-nowrap items-center justify-between gap-1 overflow-x-auto sm:w-auto sm:justify-end sm:gap-2 sm:overflow-visible">
                     {headerNavLinks.map((link) => {
                         const isActive = activeHref === link.href;
 
@@ -78,7 +78,7 @@ export function SiteHeader(): JSX.Element {
                                 href={link.href}
                                 aria-label={"ariaLabel" in link ? link.ariaLabel : `Jump to ${link.label.toLowerCase()} section`}
                                 aria-current={isActive ? "page" : undefined}
-                                className={`motion-lift min-h-11 rounded-none px-2 py-2 font-mono text-[11px] uppercase tracking-[0.18em] transition-colors sm:min-h-0 sm:px-3 sm:py-1 sm:text-xs sm:tracking-widest ${isActive
+                                className={`motion-lift rounded-none px-1.5 py-1 font-mono text-[11px] uppercase tracking-[0.1em] whitespace-nowrap transition-colors sm:px-3 sm:py-1 sm:text-xs sm:tracking-widest ${isActive
                                     ? "bg-red-700 text-white hover:bg-black"
                                     : "text-neutral-700 hover:bg-black hover:text-white"
                                     }`}
