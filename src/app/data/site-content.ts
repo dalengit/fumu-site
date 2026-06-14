@@ -111,7 +111,7 @@ export const contactSectionContent: ContactSectionContent = {
 };
 
 export const footerContent: FooterContent = {
-  batchText: "Batch_004 | next drop 2026-06-21 09:00 UTC | stay ready",
+  batchText: "Small-batch made in the North of England.",
   homeLabel: "Back to top",
 };
 
