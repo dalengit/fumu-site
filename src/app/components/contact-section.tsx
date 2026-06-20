@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent, type JSX } from "react";
 import { contactSectionContent } from "../data/site-content";
-import { siteConfig } from "../site-config";
 
 export function ContactSection(): JSX.Element {
     const [submissionState, setSubmissionState] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -144,13 +143,6 @@ export function ContactSection(): JSX.Element {
                             >
                                 Close
                             </button>
-                            <a
-                                href={`${siteConfig.basePath}/`}
-                                aria-label="Return to homepage"
-                                className="motion-lift inline-flex min-h-11 items-center rounded-none border border-black px-4 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-black hover:text-white"
-                            >
-                                Back to top
-                            </a>
                         </div>
                     </div>
                 </div>

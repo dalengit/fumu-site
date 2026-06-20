@@ -17,7 +17,7 @@ import {
 import { siteConfig } from "./site-config";
 
 export const metadata: Metadata = {
-  title: "FUMU Manchester | Handmade Chilli Oil and Asian Condiments",
+  title: "FUMU | Handmade Chilli Oil and Asian Condiments",
   description:
     "Explore FUMU chilli oil in Bolton and Manchester, including product photography, gallery highlights, and the full small-batch product line.",
   alternates: {

@@ -40,7 +40,7 @@ export const productPhotoSpotlightContent: ProductPhotoSpotlightContent = {
 export const heroContent: HeroContent = {
   title: "FUMU",
   description:
-    "Handmade in Bolton. Bold chilli oils and ferments built to wake up everyday food.",
+    "Handmade in Bolton.  Chilli Oil and Ferments.",
   ctaLabel: "See the drop",
   ctaHref: "#photo-spotlight",
   ctaAriaLabel: "Jump to the FUMU product drop",
@@ -97,7 +97,7 @@ export const contactSectionContent: ContactSectionContent = {
   emailLabel: "Hit us on email",
   emailAddress: "fuchankee@gmail.com",
   instagramLabel: "Instagram",
-  instagramUrl: "https://www.instagram.com/fumu.chilli/",
+  instagramUrl: "https://www.instagram.com/fumu.world/",
   formSubject: "New message from fumu-site",
   submitLabel: "Send it",
   fields: {
